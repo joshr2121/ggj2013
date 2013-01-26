@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Level2_test</name>
-    <event-sheet>Event sheet 2</event-sheet>
+    <event-sheet>Functions</event-sheet>
     <size>
         <width>1280</width>
         <height>1024</height>

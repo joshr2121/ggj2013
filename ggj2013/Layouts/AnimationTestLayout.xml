@@ -320,7 +320,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_03Mid">
+                <instance type="Player3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -329,7 +329,7 @@
                     <instance-variables>
                         <widthStart>0</widthStart>
                         <fatState>0</fatState>
-                        <heartRate>50</heartRate>
+                        <heartRate>1</heartRate>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

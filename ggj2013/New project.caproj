@@ -8,17 +8,19 @@
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -345,7 +347,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Player_03Mid">
+        <object-type name="Player3">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="Starting width of thebody (TODO REMOVE)" name="widthStart" type="number" />
@@ -510,22 +512,37 @@
         <object-type name="UI_FatState">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Audio">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Function">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="0">
+    <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
         <layout>Level2_test.xml</layout>
         <layout>AnimationTestLayout.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
-        <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Functions.xml</event-sheet>
         <event-sheet>AnimationHandler.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
+        <global-instance type="Audio">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+            </properties>
+        </global-instance>
+        <global-instance type="Function" />
     </global-instances>
-    <sounds-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="SFX_heartbeat_06.m4a" />
+        <file name="SFX_heartbeat_06.ogg" />
+    </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1" />
 </c2project>
