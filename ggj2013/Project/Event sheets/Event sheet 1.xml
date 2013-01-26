@@ -2,5 +2,16 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Start" type="Sprite">
+                    <param id="0" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
