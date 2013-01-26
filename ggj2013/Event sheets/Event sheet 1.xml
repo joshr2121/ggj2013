@@ -3,105 +3,108 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <comment>Use the down arrow to allow the player to deliberately drop down through a jump-thru platform.</comment>
         <event-block>
             <conditions>
-                <condition id="0" name="On key pressed" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
+                <condition id="-2" name="On start of layout" type="System" />
             </conditions>
             <actions>
-                <action behavior="Platform" id="12" name="Fall through" type="Player" />
-            </actions>
-        </event-block>
-        <comment>Allow WASD as alternate controls to arrow keys.</comment>
-        <event-block>
-            <conditions>
-                <condition id="2" name="Key is down" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" type="Player">
-                    <param id="0" name="Control">2</param>
+                <action behavior="Pin" id="0" name="Pin to object" type="player_Limbs">
+                    <param id="0" name="Pin to">Player_03Mid</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-10" name="Set value" type="Player_03Mid">
+                    <param id="0" name="Instance variable">widthStart</param>
+                    <param id="1" name="Value">Player_03Mid.Width</param>
                 </action>
             </actions>
         </event-block>
         <event-block>
             <conditions>
-                <condition id="2" name="Key is down" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
+                <condition id="-1" name="Every tick" type="System" />
+                <condition id="-5" name="Compare width" type="Player_03Mid">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">Player_03Mid.widthStart</param>
                 </condition>
+                <condition behavior="Platform" id="0" name="Is moving" type="Player_03Mid" />
             </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" type="Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" type="Player_03Mid">
+                            <param id="0" name="Width">Player_03Mid.Width  -  0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block>
             <conditions>
-                <condition id="2" name="Key is down" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" type="Player" />
-            </actions>
-        </event-block>
-        <event-block>
-            <conditions>
-                <condition id="2" name="Key is down" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" type="Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Mirror the player&apos;s image so they appear facing the right way when moving left or right.</comment>
-        <event-block any="1">
-            <conditions>
-                <condition id="0" name="On key pressed" type="Keyboard">
-                    <param id="0" name="Key">37 (Left arrow)</param>
-                </condition>
-                <condition id="0" name="On key pressed" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" type="Player">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1">
-            <conditions>
-                <condition id="0" name="On key pressed" type="Keyboard">
-                    <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="0" name="On key pressed" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>If the player falls off the bottom of the layout, restart the level.</comment>
-        <event-block>
-            <conditions>
-                <condition id="-2" name="Compare Y" type="Player">
+                <condition id="-2" name="Compare Y" type="player_Limbs">
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="Y co-ordinate">LayoutHeight</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" type="System" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" type="player_Limbs">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" type="player_Limbs">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="ent_bacon">
+                    <param id="0" name="Object">Player_03Mid</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" type="Player_03Mid">
+                    <param id="0" name="Width">1.25 * Player_03Mid.Width</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" type="Player_03Mid">
+                    <param id="0" name="Object">SolidTile</param>
+                    <param id="1" name="Offset X">10</param>
+                    <param id="2" name="Offset Y">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="8" name="Set vector X" type="Player_03Mid">
+                    <param id="0" name="Vector X">100</param>
+                </action>
             </actions>
         </event-block>
     </events>
