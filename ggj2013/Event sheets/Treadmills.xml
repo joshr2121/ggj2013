@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Treadmills</name>
+    <events>
+        <variable constant="0" name="FastTreadmillMomentum" static="0" type="number">400</variable>
+        <variable constant="0" name="SlowTreadmillMomentum" static="0" type="number">280</variable>
+        <variable constant="0" name="TreadmillMomentumReduction" static="0" type="number">8</variable>
+        <comment>SlowTreadmillMomentum is a global variable. Make sure it is divisible by TreadmillMomentumReduction.</comment>
+        <comment>Provides slow treadmill momentum.</comment>
+        <event-block>
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" type="Player">
+                    <param id="0" name="Object">LeftSlowTreadmillTest</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="LeftSlowTreadmillTest">
+                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                    <param id="1" name="Value">SlowTreadmillMomentum * -1</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">LeftSlowTreadmillTest.TreadmillMomentum</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" type="Player">
+                    <param id="0" name="Object">RightSlowTreadmillTest</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="RightSlowTreadmillTest">
+                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                    <param id="1" name="Value">SlowTreadmillMomentum</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">RightSlowTreadmillTest.TreadmillMomentum</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Reduces momentum from slow treadmills each tick by TreadmillMomentumReduction.</comment>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="LeftSlowTreadmillTest">
+                            <param id="0" name="Instance variable">TreadmillMomentum</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="LeftSlowTreadmillTest">
+                            <param id="0" name="Instance variable">TreadmillMomentum</param>
+                            <param id="1" name="Value">LeftSlowTreadmillTest.TreadmillMomentum+TreadmillMomentumReduction</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">LeftSlowTreadmillTest.TreadmillMomentum</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="RightSlowTreadmillTest">
+                                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="RightSlowTreadmillTest">
+                                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                                    <param id="1" name="Value">RightSlowTreadmillTest.TreadmillMomentum-TreadmillMomentumReduction</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Speed">RightSlowTreadmillTest.TreadmillMomentum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
+        <comment>Provides fast treadmill momentum.</comment>
+        <event-block>
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" type="Player">
+                    <param id="0" name="Object">LeftFastTreadmillTest</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="LeftFastTreadmillTest">
+                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                    <param id="1" name="Value">FastTreadmillMomentum * -1</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">LeftFastTreadmillTest.TreadmillMomentum</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="9" name="Is overlapping at offset" type="Player">
+                    <param id="0" name="Object">RightFastTreadmillTest</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" type="Player" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="RightFastTreadmillTest">
+                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                    <param id="1" name="Value">FastTreadmillMomentum</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                    <param id="0" name="Which">1</param>
+                    <param id="1" name="Speed">RightFastTreadmillTest.TreadmillMomentum</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Reduces momentum from fast treadmills each tick by TreadmillMomentumReduction.</comment>
+        <event-block>
+            <conditions>
+                <condition id="-1" name="Every tick" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="LeftFastTreadmillTest">
+                            <param id="0" name="Instance variable">TreadmillMomentum</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="LeftFastTreadmillTest">
+                            <param id="0" name="Instance variable">TreadmillMomentum</param>
+                            <param id="1" name="Value">LeftFastTreadmillTest.TreadmillMomentum+TreadmillMomentumReduction</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">LeftFastTreadmillTest.TreadmillMomentum</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="RightFastTreadmillTest">
+                                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="RightFastTreadmillTest">
+                                    <param id="0" name="Instance variable">TreadmillMomentum</param>
+                                    <param id="1" name="Value">RightFastTreadmillTest.TreadmillMomentum-TreadmillMomentumReduction</param>
+                                </action>
+                                <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Speed">RightFastTreadmillTest.TreadmillMomentum</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
