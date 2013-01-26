@@ -109,6 +109,12 @@
                                 <default-controls>Yes</default-controls>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -536,6 +542,98 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftSlowTreadmillTest">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>784</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>39.191837311</width>
+                        <height>39.191837311</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightSlowTreadmillTest">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>848</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>39.191837311</width>
+                        <height>39.191837311</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftFastTreadmillTest">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>39.191837311</width>
+                        <height>39.191837311</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightFastTreadmillTest">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>992</x>
+                        <y>768</y>
+                        <z>0</z>
+                        <width>39.191837311</width>
+                        <height>39.191837311</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

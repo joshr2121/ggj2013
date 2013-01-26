@@ -7,17 +7,18 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -342,6 +343,9 @@
                 <behavior-type name="Platform">
                     <behavior id="Platform" />
                 </behavior-type>
+                <behavior-type name="CustomMovement">
+                    <behavior id="custom" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
@@ -510,6 +514,42 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LeftSlowTreadmillTest">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="RightSlowTreadmillTest">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="LeftFastTreadmillTest">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="RightFastTreadmillTest">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -521,6 +561,7 @@
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Functions.xml</event-sheet>
         <event-sheet>AnimationHandler.xml</event-sheet>
+        <event-sheet>Treadmills.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
