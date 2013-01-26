@@ -7,12 +7,12 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -516,6 +516,9 @@
         </object-type>
         <object-type name="LeftSlowTreadmillTest">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="TreadmillMomentum" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
@@ -525,6 +528,9 @@
         </object-type>
         <object-type name="RightSlowTreadmillTest">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="TreadmillMomentum" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
@@ -534,6 +540,9 @@
         </object-type>
         <object-type name="LeftFastTreadmillTest">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="TreadmillMomentum" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
@@ -543,6 +552,9 @@
         </object-type>
         <object-type name="RightFastTreadmillTest">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="TreadmillMomentum" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid">
                     <behavior id="solid" />
