@@ -86,7 +86,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player3">
+                <instance type="Player">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
