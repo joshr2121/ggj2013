@@ -105,20 +105,6 @@
                 <action id="-9" name="Destroy" type="ent_bacon" />
             </actions>
         </event-block>
-        <event-block disabled="1">
-            <conditions>
-                <condition id="9" name="Is overlapping at offset" type="Player">
-                    <param id="0" name="Object">SolidTile</param>
-                    <param id="1" name="Offset X">10</param>
-                    <param id="2" name="Offset Y">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="8" name="Set vector X" type="Player">
-                    <param id="0" name="Vector X">100</param>
-                </action>
-            </actions>
-        </event-block>
         <comment>Test effects for treadmill</comment>
         <event-block>
             <conditions>
