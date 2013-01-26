@@ -328,6 +328,8 @@
                     </properties>
                     <instance-variables>
                         <widthStart>0</widthStart>
+                        <fatState>0</fatState>
+                        <heartRate>50</heartRate>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
