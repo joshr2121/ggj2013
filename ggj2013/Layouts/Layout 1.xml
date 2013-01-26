@@ -103,7 +103,7 @@
                                 <max-speed>330</max-speed>
                                 <acceleration>1500</acceleration>
                                 <deceleration>1500</deceleration>
-                                <jump-strength>450</jump-strength>
+                                <jump-strength>900</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <default-controls>Yes</default-controls>
@@ -551,17 +551,20 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <instance-variables>
+                        <TreadmillMomentum>0</TreadmillMomentum>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>784</x>
-                        <y>768</y>
+                        <x>480</x>
+                        <y>176</y>
                         <z>0</z>
-                        <width>39.191837311</width>
-                        <height>39.191837311</height>
+                        <width>160</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -574,6 +577,9 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <instance-variables>
+                        <TreadmillMomentum>0</TreadmillMomentum>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
@@ -581,10 +587,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>848</x>
-                        <y>768</y>
+                        <y>192</y>
                         <z>0</z>
-                        <width>39.191837311</width>
-                        <height>39.191837311</height>
+                        <width>160</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -597,17 +603,20 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <instance-variables>
+                        <TreadmillMomentum>0</TreadmillMomentum>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>928</x>
-                        <y>768</y>
+                        <x>272</x>
+                        <y>176</y>
                         <z>0</z>
-                        <width>39.191837311</width>
-                        <height>39.191837311</height>
+                        <width>192</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -620,17 +629,20 @@
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
                     </properties>
+                    <instance-variables>
+                        <TreadmillMomentum>0</TreadmillMomentum>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>768</y>
+                        <x>1056</x>
+                        <y>192</y>
                         <z>0</z>
-                        <width>39.191837311</width>
-                        <height>39.191837311</height>
+                        <width>144</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
