@@ -42,13 +42,13 @@
                         <condition id="-7" name="Compare instance variable" type="Player">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">4.99</param>
+                            <param id="2" name="Value">4.995</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" type="Player">
                             <param id="0" name="Instance variable">heartRate</param>
-                            <param id="1" name="Value">0.01</param>
+                            <param id="1" name="Value">0.005</param>
                         </action>
                     </actions>
                 </event-block>
@@ -71,7 +71,7 @@
                 </action>
                 <action id="-11" name="Add to" type="Player">
                     <param id="0" name="Instance variable">heartRate</param>
-                    <param id="1" name="Value">0.25</param>
+                    <param id="1" name="Value">0.1</param>
                 </action>
             </actions>
         </event-block>
