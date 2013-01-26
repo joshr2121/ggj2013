@@ -11,8 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Layout 1</layout>
-        <layout active="1">Ben test 1</layout>
-        <event-sheet>Event sheet 1</event-sheet>
+        <layout>Level2_test</layout>
+        <layout active="1">AnimationTestLayout</layout>
+        <event-sheet>AnimationHandler</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
