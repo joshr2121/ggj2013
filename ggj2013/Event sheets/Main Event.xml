@@ -43,6 +43,10 @@
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action id="-10" name="Set value" type="UI_Heart">
+                    <param id="0" name="Instance variable">prevRate</param>
+                    <param id="1" name="Value">playerBody.heartRate</param>
+                </action>
             </actions>
         </event-block>
         <event-block>
@@ -307,6 +311,20 @@
                 <action id="4" name="Set animation" type="PlayerFeet_Idle">
                     <param id="0" name="Animation">&quot;Run&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Heart pulsating</comment>
+        <event-block>
+            <conditions>
+                <condition id="3" name="Compare frame" type="UI_Heart">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" type="UI_Heart">
+                    <param id="0" name="Speed">playerBody.heartRate * 10</param>
                 </action>
             </actions>
         </event-block>
