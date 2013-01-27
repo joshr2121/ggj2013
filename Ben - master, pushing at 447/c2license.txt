@@ -1,0 +1,9 @@
+﻿License type: PERSONAL
+Product: Construct 2
+Licensed to: Chris Hernandez
+Email: ckhernandez@gmail.com
+Comment: Purchased via Chris Hernandez (ckhernandez@gmail.com)
+Timestamp: 1343406532
+Hash: B6028F7A7ECE88645532FCAC71B85AC5AD1336E6D2D56351
+
+This is a standard license, for independent use by the above named individual up to an associated use revenue of 5000 USD, or educational, charity or otherwise non-commercial use.  Use outside of these bounds is prohibited.

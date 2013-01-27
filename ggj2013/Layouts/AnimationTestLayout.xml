@@ -317,7 +317,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>

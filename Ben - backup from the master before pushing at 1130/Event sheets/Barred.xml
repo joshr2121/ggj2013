@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Barred</name>
+    <events>
+        <variable comment="The max fat state for the player to fit through wide barred walls or floors." constant="0" name="WideMaxFatState" static="0" type="number">2</variable>
+        <variable comment="The max fat state for the player to fit through thin barred walls or floors." constant="0" name="ThinMaxFatState" static="0" type="number">1</variable>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Player">
+                    <param id="0" name="Object">BarredFloorThin</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.fatState</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">ThinMaxFatState</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorThin">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorThin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Player">
+                    <param id="0" name="Object">BarredFloorWide</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.fatState</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WideMaxFatState</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorWide">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorWide">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Player">
+                    <param id="0" name="Object">BarredWallThin</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.fatState</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">ThinMaxFatState</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredWallThin">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredWallThin">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="Player">
+                    <param id="0" name="Object">BarredWallWide</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.fatState</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">WideMaxFatState</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredWallWide">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-22" name="Else" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredWallWide">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

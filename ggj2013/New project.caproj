@@ -7,12 +7,12 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -316,7 +316,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ent_bacon">
+        <object-type name="ent_bacon_dance">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="23" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="22">
@@ -517,8 +517,8 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="0">
-                    <frame duration="1" hotspotX="0.5" hotspotY="-0.387097" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="-0.6125" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -761,7 +761,16 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.24537" y="0.254808" />
+                            <point x="0.5" y="0.240385" />
+                            <point x="0.657407" y="0.355769" />
+                            <point x="0.662037" y="0.649038" />
+                            <point x="0.5" y="0.913462" />
+                            <point x="0.333333" y="0.653846" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -810,7 +819,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SwitchDoorVertical">
+        <object-type name="SteelDoor">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="CustomMovement">
@@ -1372,10 +1381,10 @@
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="10">
                     <frame duration="1" hotspotX="0.640625" hotspotY="0.5" />
                 </animation>
-                <animation framecount="8" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                <animation framecount="8" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" speed="10">
                     <frame duration="1" hotspotX="0.59375" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.59375" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.59375" hotspotY="0.5" />
@@ -1387,12 +1396,110 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BarsBackHoriztonal">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.533333">
+                        <collision-poly>
+                            <point x="0.0234375" y="0.2" />
+                            <point x="0.5" y="0.133333" />
+                            <point x="1" y="0" />
+                            <point x="0.0859375" y="0.466667" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.866667" />
+                            <point x="0.0234375" y="0.8" />
+                            <point x="0" y="0.466667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BarsFrontHoriztonal">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739">
+                        <collision-poly>
+                            <point x="0.03125" y="0.173913" />
+                            <point x="0.5" y="0.0869565" />
+                            <point x="0.992188" y="0.0434783" />
+                            <point x="0.992188" y="0.956522" />
+                            <point x="0.0078125" y="0.956522" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BarsBackVertical">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.523438">
+                        <collision-poly>
+                            <point x="0.266667" y="0.03125" />
+                            <point x="0.466667" y="0" />
+                            <point x="0.8" y="0.0234375" />
+                            <point x="0.933333" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.466667" y="0.203125" />
+                            <point x="0.0666667" y="0.992188" />
+                            <point x="0.133333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BarsFrontVertical">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.521739" hotspotY="0.523438">
+                        <collision-poly>
+                            <point x="0.0434783" y="0.0078125" />
+                            <point x="0.869565" y="0.0234375" />
+                            <point x="0.913043" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.0434783" y="0.992188" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FanSprite">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ent_bacon_float">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="11">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Test Level.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
+        <layout>Level 3.xml</layout>
         <layout>AnimationTestLayout.xml</layout>
     </layout-folder>
     <event-folder expanded="1">

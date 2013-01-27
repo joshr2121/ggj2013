@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PressureButtons</name>
+    <events>
+        <event-group description="" title="Init">
+            <sub-events>
+                <comment>Set each button instance&apos;s required state</comment>
+                <event-block>
+                    <conditions>
+                        <condition id="-2" name="On start of layout" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="PressureButton">
+                            <param id="0" name="Instance variable">minState</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" title="Activation">
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="0" name="On collision with another object" type="PressureButton">
+                            <param id="0" name="Object">PlayerCollision</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PressureButton">
+                            <param id="0" name="Instance variable">triggered</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatState</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" type="PressureButton">
+                            <param id="0" name="Instance variable">triggered</param>
+                        </action>
+                        <action id="5" name="Set frame" type="PressureButton">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
