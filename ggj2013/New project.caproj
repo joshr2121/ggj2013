@@ -7,12 +7,12 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -498,7 +498,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LeftSlowTreadmillTest">
+        <object-type name="TreadmillSlowLeft">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="TreadmillMomentum" type="number" />
@@ -510,7 +510,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="RightSlowTreadmillTest">
+        <object-type name="TreadmillSlowRight">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="TreadmillMomentum" type="number" />
@@ -522,7 +522,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="LeftFastTreadmillTest">
+        <object-type name="TreadmillFastLeft">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="TreadmillMomentum" type="number" />
@@ -534,7 +534,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="RightFastTreadmillTest">
+        <object-type name="TreadmillFastRight">
             <plugin id="TiledBg" />
             <instance-variables>
                 <instance-variable name="TreadmillMomentum" type="number" />
@@ -546,7 +546,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="LightBreakableWall">
+        <object-type name="BreakableWallLight">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid">
@@ -555,7 +555,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="LightBreakableFloor">
+        <object-type name="BreakableFloorLight">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid">
@@ -564,7 +564,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="HeavyBreakableWall">
+        <object-type name="BreakableWallHeavy">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid">
@@ -573,7 +573,7 @@
             </behaviors>
             <texture />
         </object-type>
-        <object-type name="HeavyBreakableFloor">
+        <object-type name="BreakableFloorHeavy">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid">
@@ -603,6 +603,42 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BarredFloorThin">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="BarredFloorWide">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="BarredWallThin">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="BarredWallWide">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -616,6 +652,7 @@
         <event-sheet>Treadmills.xml</event-sheet>
         <event-sheet>Breakables.xml</event-sheet>
         <event-sheet>PressureButtons.xml</event-sheet>
+        <event-sheet>Barred.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
