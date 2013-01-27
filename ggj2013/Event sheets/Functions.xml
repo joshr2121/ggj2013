@@ -500,7 +500,7 @@
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_puking_02</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;fat death&quot;</param>
                 </action>
                 <action id="-26" name="Restart layout" type="System" />
@@ -516,7 +516,7 @@
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_puking_01</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;fat death&quot;</param>
                 </action>
                 <action id="-26" name="Restart layout" type="System" />
