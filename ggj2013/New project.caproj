@@ -7,8 +7,8 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -1497,20 +1497,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="UI_Heart">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="prevRate" type="number" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="10">
-                    <frame duration="1" hotspotX="0.526316" hotspotY="0.529412" />
-                    <frame duration="1" hotspotX="0.541667" hotspotY="0.521739" />
-                    <frame duration="1" hotspotX="0.517241" hotspotY="0.535714" />
-                    <frame duration="1" hotspotX="0.541667" hotspotY="0.521739" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="LevelEndWall">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -1534,6 +1520,50 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <image-point name="Imagepoint 1" x="0.5" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DeathVeinsLow">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="maxHeartRate" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.197917" />
+                            <point x="0.5" y="0.134115" />
+                            <point x="0.362305" y="0.85026" />
+                            <point x="0.260742" y="0.5" />
+                            <point x="0.788086" y="0.717448" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0" y="1" />
+                            <point x="0.224609" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DeathVeinsHigh">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="minHeartRate" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.148438" y="0.197917" />
+                            <point x="0.5" y="0.134115" />
+                            <point x="0.362305" y="0.85026" />
+                            <point x="0.260742" y="0.5" />
+                            <point x="0.788086" y="0.717448" />
+                            <point x="0.5" y="0.921875" />
+                            <point x="0" y="1" />
+                            <point x="0.224609" y="0.5" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>

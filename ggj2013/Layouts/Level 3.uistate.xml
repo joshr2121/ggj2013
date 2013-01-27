@@ -6,12 +6,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>312.086</position-x>
         <position-y>344.124</position-y>
-        <position-z>119.008</position-z>
+        <position-z>158.4</position-z>
         <lookat-x>312.086</lookat-x>
         <lookat-y>344.124</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
-    <snap-to-grid>0</snap-to-grid>
+    <snap-to-grid>1</snap-to-grid>
     <snap-width>32</snap-width>
     <snap-height>32</snap-height>
     <properties>
@@ -20,7 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Game" />
+    <active-layer name="UI" />
     <layers>
         <layer locked="1" name="Background" parallax-in-editor="0" visible="1" />
         <layer locked="0" name="Game" parallax-in-editor="0" visible="1" />
