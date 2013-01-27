@@ -360,11 +360,11 @@
                         <x>139</x>
                         <y>416</y>
                         <z>0</z>
-                        <width>37</width>
-                        <height>23</height>
+                        <width>68</width>
+                        <height>68</height>
                         <depth>0</depth>
-                        <hotspotX>0.297297299</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.632352948</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -392,11 +392,11 @@
                         <x>139</x>
                         <y>321</y>
                         <z>0</z>
-                        <width>51</width>
-                        <height>41</height>
+                        <width>125</width>
+                        <height>190</height>
                         <depth>0</depth>
-                        <hotspotX>0.509803951</hotspotX>
-                        <hotspotY>0.51219511</hotspotY>
+                        <hotspotX>0.495999992</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
