@@ -7,21 +7,21 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -338,6 +338,8 @@
                 <instance-variable comment="Starting width of thebody (TODO REMOVE)" name="widthStart" type="number" />
                 <instance-variable comment="The current state of fatness of the player" name="fatState" type="number" />
                 <instance-variable name="heartRate" type="number" />
+                <instance-variable comment="Saves the player&apos;s y speed. Updated every .25 seconds. Used for Breakables." name="fallSpeed" type="number" />
+                <instance-variable comment="Saves the player&apos;s x speed. Updated every .25 seconds. Used for Breakables." name="runSpeed" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform">
@@ -562,6 +564,45 @@
             </behaviors>
             <texture />
         </object-type>
+        <object-type name="LightBreakableWall">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="LightBreakableFloor">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="HeavyBreakableWall">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="HeavyBreakableFloor">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Debug_Fall_Speed">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -574,6 +615,7 @@
         <event-sheet>Functions.xml</event-sheet>
         <event-sheet>AnimationHandler.xml</event-sheet>
         <event-sheet>Treadmills.xml</event-sheet>
+        <event-sheet>Breakables.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
