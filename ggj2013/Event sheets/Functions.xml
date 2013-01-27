@@ -323,7 +323,7 @@
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">PlayerBody.maxHeartRate</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -370,7 +370,7 @@
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="2" name="Value">PlayerBody.maxHeartRate</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -419,7 +419,7 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_treadmill_on</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-25</param>
+                            <param id="3" name="Volume">-20</param>
                             <param id="1" name="Tag (optional)">&quot;treadmill&quot;</param>
                         </action>
                     </actions>
@@ -462,13 +462,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" type="System" />
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_puking_02</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;fat death&quot;</param>
                 </action>
+                <action id="-26" name="Restart layout" type="System" />
             </actions>
         </event-block>
         <event-block>
@@ -478,13 +478,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" type="System" />
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_puking_01</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;fat death&quot;</param>
                 </action>
+                <action id="-26" name="Restart layout" type="System" />
             </actions>
         </event-block>
     </events>

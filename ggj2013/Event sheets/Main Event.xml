@@ -12,7 +12,7 @@
         <include>Treadmills</include>
         <event-block>
             <conditions>
-                <condition id="-2" name="On start of layout" type="System" />
+                <condition id="-25" name="On loading finished" type="System" />
             </conditions>
             <actions>
                 <action id="0" name="Play" type="Audio">
@@ -27,6 +27,13 @@
                     <param id="3" name="Volume">-100</param>
                     <param id="1" name="Tag (optional)">&quot;breathing&quot;</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
                 <action behavior="Pin" id="0" name="Pin to object" type="PlayerHead">
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>

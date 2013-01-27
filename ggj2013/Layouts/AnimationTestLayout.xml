@@ -292,8 +292,8 @@
                         <runSpeed>0</runSpeed>
                         <treadmillSound>false</treadmillSound>
                         <faceLeft>false</faceLeft>
-                        <maxHeartRate>1.8</maxHeartRate>
-                        <minHeartRate>0.2</minHeartRate>
+                        <maxHeartRate>3</maxHeartRate>
+                        <minHeartRate>0.1</minHeartRate>
                         <deathActive>true</deathActive>
                     </instance-variables>
                     <behavior-instances>
