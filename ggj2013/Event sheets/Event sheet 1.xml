@@ -106,19 +106,6 @@
                 <action id="-9" name="Destroy" type="ent_bacon" />
             </actions>
         </event-block>
-        <comment>Test effects for treadmill</comment>
-        <event-block>
-            <conditions>
-                <condition id="0" name="On collision with another object" type="ent_treadmill">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" type="Player">
-                    <param id="0" name="Width">0.90*int(Player.Width)</param>
-                </action>
-            </actions>
-        </event-block>
         <comment>Draw UI elements</comment>
         <event-block collapsed="1">
             <conditions>
@@ -132,7 +119,7 @@
                     <param id="0" name="Text">&quot;Weight: &quot; &amp;int(Player.Width*4)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_Heartrate">
-                    <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;Player.heartRate</param>
+                    <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;int(Player.heartRate * 100)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_FatState">
                     <param id="0" name="Text">&quot;Fat State: &quot; &amp;int(Player.fatState)</param>

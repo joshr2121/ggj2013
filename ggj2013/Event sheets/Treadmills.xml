@@ -26,6 +26,10 @@
                     <param id="0" name="Which">1</param>
                     <param id="1" name="Speed">LeftSlowTreadmillTest.TreadmillMomentum</param>
                 </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;treadmill&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
         </event-block>
         <event-block>
@@ -45,6 +49,10 @@
                 <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
                     <param id="0" name="Which">1</param>
                     <param id="1" name="Speed">RightSlowTreadmillTest.TreadmillMomentum</param>
+                </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;treadmill&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
@@ -126,6 +134,10 @@
                     <param id="0" name="Which">1</param>
                     <param id="1" name="Speed">LeftFastTreadmillTest.TreadmillMomentum</param>
                 </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;treadmill&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
         </event-block>
         <event-block>
@@ -145,6 +157,10 @@
                 <action behavior="CustomMovement" id="2" name="Set speed" type="Player">
                     <param id="0" name="Which">1</param>
                     <param id="1" name="Speed">RightFastTreadmillTest.TreadmillMomentum</param>
+                </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;treadmill&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
                 </action>
             </actions>
         </event-block>
