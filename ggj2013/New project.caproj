@@ -8,11 +8,11 @@
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -257,6 +257,9 @@
                 <instance-variable comment="Saves the player&apos;s x speed. Updated every .25 seconds. Used for Breakables." name="runSpeed" type="number" />
                 <instance-variable comment="if treadmill sound is playing" name="treadmillSound" type="boolean" />
                 <instance-variable comment="If the player is facing left" name="faceLeft" type="boolean" />
+                <instance-variable comment="Player dies if heartRate is above this" name="maxHeartRate" type="number" />
+                <instance-variable comment="Player dies if heartRate is below this" name="minHeartRate" type="number" />
+                <instance-variable comment="If player can die. Set to false for debugging and shit" name="deathActive" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="CustomMovement">
@@ -1387,6 +1390,20 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="UI_Heart">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="previousRate" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="10">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.529412" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.535714" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1426,6 +1443,10 @@
         <file name="SFX_wall_crash_through.ogg" />
         <file name="SFX_breathing_06.m4a" />
         <file name="SFX_breathing_06.ogg" />
+        <file name="SFX_puking_01.m4a" />
+        <file name="SFX_puking_01.ogg" />
+        <file name="SFX_puking_02.m4a" />
+        <file name="SFX_puking_02.ogg" />
     </sounds-folder>
     <music-folder expanded="1" />
     <files-folder expanded="1" />
