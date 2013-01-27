@@ -237,6 +237,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;fan&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action behavior="Platform" id="9" name="Set vector Y" type="PlayerCollision">
                     <param id="0" name="Vector Y">PlayerCollision.Platform.VectorY-75</param>
                 </action>
@@ -356,8 +360,8 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_jump_fart_05</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;jump5&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -374,8 +378,8 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_jump_fart_04</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;jump4&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -392,8 +396,8 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_jump_03</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;jump3&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -410,8 +414,8 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_jump_02</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;jump2&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -428,8 +432,8 @@
                         <action id="0" name="Play" type="Audio">
                             <param id="0" name="Audio file">SFX_jump_01</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;jump1&quot;</param>
                         </action>
                     </actions>
                 </event-block>
