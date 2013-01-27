@@ -50,10 +50,6 @@
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action id="-10" name="Set value" type="UI_Heart">
-                    <param id="0" name="Instance variable">prevRate</param>
-                    <param id="1" name="Value">playerBody.heartRate</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block>
@@ -417,19 +413,6 @@
         <comment>Heart pulsating</comment>
         <event-block>
             <conditions>
-                <condition id="3" name="Compare frame" type="UI_Heart">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="6" name="Set speed" type="UI_Heart">
-                    <param id="0" name="Speed">playerBody.heartRate * 10</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block>
-            <conditions>
                 <condition id="0" name="On key pressed" type="Keyboard">
                     <param id="0" name="Key">38 (Up arrow)</param>
                 </condition>
@@ -527,6 +510,83 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment>Death Veins</comment>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">DeathVeinsLow.maxHeartRate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathVeinsLow">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="9" name="Set scale" type="DeathVeinsLow">
+                    <param id="0" name="Scale">2.3 - (2 * (DeathVeinsLow.maxHeartRate - PlayerBody.heartRate))</param>
+                </action>
+                <action id="-16" name="Set opacity" type="DeathVeinsLow">
+                    <param id="0" name="Opacity">500 * (DeathVeinsLow.maxHeartRate - PlayerBody.heartRate)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathVeinsLow">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">DeathVeinsHigh.minHeartRate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathVeinsHigh">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="9" name="Set scale" type="DeathVeinsHigh">
+                    <param id="0" name="Scale">2.3 - (2 * (PlayerBody.heartRate - DeathVeinsHigh.minHeartRate))</param>
+                </action>
+                <action id="-16" name="Set opacity" type="DeathVeinsHigh">
+                    <param id="0" name="Opacity">500 * (PlayerBody.heartRate - DeathVeinsHigh.minHeartRate)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathVeinsHigh">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set defaults for Death Veins</comment>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="DeathVeinsLow">
+                    <param id="0" name="Instance variable">maxHeartRate</param>
+                    <param id="1" name="Value">PlayerBody.minHeartRate + 0.5</param>
+                </action>
+                <action id="-10" name="Set value" type="DeathVeinsHigh">
+                    <param id="0" name="Instance variable">minHeartRate</param>
+                    <param id="1" name="Value">PlayerBody.maxHeartRate - 0.5</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
