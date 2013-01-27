@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Level 2</name>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Main Event</event-sheet>
     <size>
         <width>2500</width>
         <height>1000</height>
@@ -999,9 +999,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <widthStart>30</widthStart>
-                        <fatState>0</fatState>
                         <heartRate>1</heartRate>
+                        <fatness>0.5</fatness>
+                        <fatState>3</fatState>
                         <fallSpeed>0</fallSpeed>
                         <runSpeed>0</runSpeed>
                         <treadmillSound>false</treadmillSound>

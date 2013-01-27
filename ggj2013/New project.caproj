@@ -7,11 +7,11 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -250,12 +250,12 @@
         <object-type name="PlayerBody">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable comment="Starting width of thebody (TODO REMOVE)" name="widthStart" type="number" />
-                <instance-variable comment="The current state of fatness of the player" name="fatState" type="number" />
-                <instance-variable name="heartRate" type="number" />
+                <instance-variable comment="heartbeat sound playback speed" name="heartRate" type="number" />
+                <instance-variable comment="fatness index" name="fatness" type="number" />
+                <instance-variable comment="Current state of fatness of the player" name="fatState" type="number" />
                 <instance-variable comment="Saves the player&apos;s y speed. Updated every .25 seconds. Used for Breakables." name="fallSpeed" type="number" />
                 <instance-variable comment="Saves the player&apos;s x speed. Updated every .25 seconds. Used for Breakables." name="runSpeed" type="number" />
-                <instance-variable name="treadmillSound" type="boolean" />
+                <instance-variable comment="if treadmill sound is playing" name="treadmillSound" type="boolean" />
                 <instance-variable comment="If the player is facing left" name="faceLeft" type="boolean" />
             </instance-variables>
             <behaviors>
@@ -1257,7 +1257,7 @@
         <layout>AnimationTestLayout.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Main Event.xml</event-sheet>
         <event-sheet>Functions.xml</event-sheet>
         <event-sheet>AnimationHandler.xml</event-sheet>
         <event-sheet>Treadmills.xml</event-sheet>

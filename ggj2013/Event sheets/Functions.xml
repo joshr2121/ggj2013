@@ -12,10 +12,232 @@
             <actions>
                 <action id="3" name="Set volume" type="Audio">
                     <param id="0" name="Tag">&quot;breathing&quot;</param>
-                    <param id="1" name="dB">PlayerBody.Width - 70</param>
+                    <param id="1" name="dB">(PlayerBody.fatness - 1) * 50</param>
+                </action>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">650</param>
+                </action>
+                <action id="-5" name="Set width" type="PlayerBody">
+                    <param id="0" name="Width">PlayerBody.fatness * 82 + 60</param>
                 </action>
             </actions>
             <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0.2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatState</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                            <param id="0" name="Jump strength">550</param>
+                        </action>
+                        <action id="-5" name="Set width" type="PlayerBody">
+                            <param id="0" name="Width">(PlayerBody.fatness - 0.2) * 82 + 60</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                                    <param id="0" name="Instance variable">faceLeft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" type="PlayerBody">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                                    <param id="0" name="Instance variable">faceLeft</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" type="PlayerBody">
+                                    <param id="0" name="Frame number">6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block>
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                                    <param id="0" name="Instance variable">fatness</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0.4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" type="PlayerBody">
+                                    <param id="0" name="Instance variable">fatState</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                                    <param id="0" name="Jump strength">450</param>
+                                </action>
+                                <action id="-5" name="Set width" type="PlayerBody">
+                                    <param id="0" name="Width">(PlayerBody.fatness - 0.4) * 82 + 60</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                                            <param id="0" name="Instance variable">faceLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" type="PlayerBody">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                                            <param id="0" name="Instance variable">faceLeft</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" type="PlayerBody">
+                                            <param id="0" name="Frame number">7</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block>
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                                            <param id="0" name="Instance variable">fatness</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0.6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" type="PlayerBody">
+                                            <param id="0" name="Instance variable">fatState</param>
+                                            <param id="1" name="Value">4</param>
+                                        </action>
+                                        <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                                            <param id="0" name="Jump strength">350</param>
+                                        </action>
+                                        <action id="-5" name="Set width" type="PlayerBody">
+                                            <param id="0" name="Width">(PlayerBody.fatness - 0.6) * 82 + 60</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                                                    <param id="0" name="Instance variable">faceLeft</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" type="PlayerBody">
+                                                    <param id="0" name="Frame number">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                                                    <param id="0" name="Instance variable">faceLeft</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="5" name="Set frame" type="PlayerBody">
+                                                    <param id="0" name="Frame number">8</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block>
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                                                    <param id="0" name="Instance variable">fatness</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0.8</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" type="PlayerBody">
+                                                    <param id="0" name="Instance variable">fatState</param>
+                                                    <param id="1" name="Value">5</param>
+                                                </action>
+                                                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                                                    <param id="0" name="Jump strength">250</param>
+                                                </action>
+                                                <action id="-5" name="Set width" type="PlayerBody">
+                                                    <param id="0" name="Width">(PlayerBody.fatness - 0.8) * 82 + 60</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block>
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                                                            <param id="0" name="Instance variable">faceLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" type="PlayerBody">
+                                                            <param id="0" name="Frame number">4</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block>
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                                                            <param id="0" name="Instance variable">faceLeft</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="5" name="Set frame" type="PlayerBody">
+                                                            <param id="0" name="Frame number">9</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
@@ -43,24 +265,35 @@
                     <param id="0" name="Name">&quot;move&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-5" name="Set width" type="PlayerBody">
-                    <param id="0" name="Width">PlayerBody.Width -0.05</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Value">0.005</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">4.995</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-11" name="Add to" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
-                            <param id="1" name="Value">0.005</param>
+                            <param id="1" name="Value">0.02</param>
                         </action>
                     </actions>
                 </event-block>
@@ -73,9 +306,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" type="PlayerBody">
-                    <param id="0" name="Width">PlayerBody.Width + 10</param>
-                </action>
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_eating_bacon_short_01</param>
                     <param id="2" name="Loop">0</param>
@@ -87,9 +317,24 @@
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">4.9</param>
+                            <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -107,12 +352,23 @@
                     <param id="0" name="Name">&quot;treadmill&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-5" name="Set width" type="PlayerBody">
-                    <param id="0" name="Width">PlayerBody.Width - 0.1</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" type="PlayerBody">
+                            <param id="0" name="Instance variable">fatness</param>
+                            <param id="1" name="Value">0.001</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block>
                     <conditions>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
