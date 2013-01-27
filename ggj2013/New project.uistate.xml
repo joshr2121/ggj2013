@@ -11,13 +11,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Layout 1</layout>
-        <layout>Level 1</layout>
+        <layout active="1">Level 1</layout>
         <event-sheet>Event sheet 1</event-sheet>
-        <event-sheet active="1">Functions</event-sheet>
+        <event-sheet>Functions</event-sheet>
         <event-sheet>Breakables</event-sheet>
         <event-sheet>Treadmills</event-sheet>
         <event-sheet>PressureButtons</event-sheet>
         <event-sheet>Barred</event-sheet>
+        <event-sheet>Checkpoints</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

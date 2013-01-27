@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>Checkpoints</include>
         <include>Barred</include>
         <include>PressureButtons</include>
         <include>Functions</include>
