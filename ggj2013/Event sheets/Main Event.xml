@@ -27,6 +27,12 @@
                     <param id="3" name="Volume">-100</param>
                     <param id="1" name="Tag (optional)">&quot;breathing&quot;</param>
                 </action>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">BacMan_Music_Level_00</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;music&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block>
