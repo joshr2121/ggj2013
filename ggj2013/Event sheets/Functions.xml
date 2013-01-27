@@ -417,7 +417,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="0" name="Play" type="Audio">
-                            <param id="0" name="Audio file">SFX_treadmill_on</param>
+                            <param id="0" name="Audio file">SFX_treadmill_off</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-20</param>
                             <param id="1" name="Tag (optional)">&quot;treadmill&quot;</param>
@@ -451,6 +451,41 @@
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-10</param>
                     <param id="1" name="Tag (optional)">&quot;breakable&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On function" type="Function">
+                    <param id="0" name="Name">&quot;fan&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                    <param id="0" name="Instance variable">fanSound</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">fanSound</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">SFX_treadmill_on</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;fan&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On ended" type="Audio">
+                    <param id="0" name="Tag">&quot;fan&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">fanSound</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

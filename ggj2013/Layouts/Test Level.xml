@@ -891,14 +891,15 @@
                     </properties>
                     <instance-variables>
                         <heartRate>1</heartRate>
+                        <minHeartRate>0.1</minHeartRate>
+                        <maxHeartRate>3</maxHeartRate>
                         <fatness>0.5</fatness>
                         <fatState>3</fatState>
                         <fallSpeed>0</fallSpeed>
                         <runSpeed>0</runSpeed>
                         <treadmillSound>false</treadmillSound>
+                        <fanSound>false</fanSound>
                         <faceLeft>false</faceLeft>
-                        <maxHeartRate>3</maxHeartRate>
-                        <minHeartRate>0.1</minHeartRate>
                         <deathActive>true</deathActive>
                     </instance-variables>
                     <behavior-instances>
