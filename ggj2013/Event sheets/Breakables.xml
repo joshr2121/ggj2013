@@ -13,7 +13,7 @@
         <event-block>
             <conditions>
                 <condition id="9" name="Is overlapping at offset" type="Player">
-                    <param id="0" name="Object">LightBreakableFloor</param>
+                    <param id="0" name="Object">BreakableFloorLight</param>
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
                 </condition>
@@ -33,7 +33,7 @@
                     <param id="0" name="Name">&quot;breakable&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="-9" name="Destroy" type="LightBreakableFloor" />
+                <action id="-9" name="Destroy" type="BreakableFloorLight" />
             </actions>
             <sub-events>
                 <comment>Debug</comment>
@@ -53,7 +53,7 @@
         <event-block>
             <conditions>
                 <condition id="9" name="Is overlapping at offset" type="Player">
-                    <param id="0" name="Object">HeavyBreakableFloor</param>
+                    <param id="0" name="Object">BreakableFloorHeavy</param>
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
                 </condition>
@@ -73,7 +73,7 @@
                     <param id="0" name="Name">&quot;breakable&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="-9" name="Destroy" type="HeavyBreakableFloor" />
+                <action id="-9" name="Destroy" type="BreakableFloorHeavy" />
             </actions>
         </event-block>
         <comment>Updates fall speed</comment>
@@ -94,12 +94,7 @@
         <event-block>
             <conditions>
                 <condition id="0" name="On collision with another object" type="Player">
-                    <param id="0" name="Object">LightBreakableWall</param>
-                </condition>
-                <condition id="-8" name="Compare two values" type="System">
-                    <param id="0" name="First value">Player.runSpeed</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">LightBreakableMinRunSpeed</param>
+                    <param id="0" name="Object">BreakableWallLight</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" type="Player">
                     <param id="0" name="Instance variable">fatState</param>
@@ -112,19 +107,31 @@
                     <param id="0" name="Name">&quot;breakable&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="-9" name="Destroy" type="LightBreakableWall" />
+                <action id="-9" name="Destroy" type="BreakableWallLight" />
             </actions>
+            <sub-events>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">LightBreakableMinRunSpeed</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">LightBreakableMinRunSpeed * -1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>Heavy breakable wall collisions</comment>
         <event-block>
             <conditions>
                 <condition id="0" name="On collision with another object" type="Player">
-                    <param id="0" name="Object">HeavyBreakableWall</param>
-                </condition>
-                <condition id="-8" name="Compare two values" type="System">
-                    <param id="0" name="First value">Player.runSpeed</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">HeavyBreakableMinRunSpeed</param>
+                    <param id="0" name="Object">BreakableWallHeavy</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" type="Player">
                     <param id="0" name="Instance variable">fatState</param>
@@ -137,8 +144,25 @@
                     <param id="0" name="Name">&quot;breakable&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
-                <action id="-9" name="Destroy" type="HeavyBreakableWall" />
+                <action id="-9" name="Destroy" type="BreakableWallHeavy" />
             </actions>
+            <sub-events>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">HeavyBreakableMinRunSpeed</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" type="System">
+                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">HeavyBreakableMinRunSpeed * -1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block>
             <conditions>
@@ -152,6 +176,9 @@
                     <param id="1" name="Value">Player.Platform.VectorX</param>
                 </action>
             </actions>
+            <sub-events>
+                <comment>Updates run speed</comment>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
