@@ -292,9 +292,6 @@
                         <runSpeed>0</runSpeed>
                         <treadmillSound>false</treadmillSound>
                         <faceLeft>false</faceLeft>
-                        <maxHeartRate>160</maxHeartRate>
-                        <minHeartRate>20</minHeartRate>
-                        <deathActive>true</deathActive>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">

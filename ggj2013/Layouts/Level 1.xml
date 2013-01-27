@@ -312,9 +312,6 @@
                         <runSpeed>0</runSpeed>
                         <treadmillSound>false</treadmillSound>
                         <faceLeft>false</faceLeft>
-                        <maxHeartRate>160</maxHeartRate>
-                        <minHeartRate>20</minHeartRate>
-                        <deathActive>true</deathActive>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="CustomMovement">
@@ -334,8 +331,8 @@
                         <width>30</width>
                         <height>70</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.463414639</hotspotX>
+                        <hotspotY>0.536585391</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1154,30 +1151,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="UI_Heart">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <previousRate>0</previousRate>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>432</x>
-                        <y>48</y>
-                        <z>0</z>
-                        <width>19</width>
-                        <height>17</height>
-                        <depth>0</depth>
-                        <hotspotX>0.526315808</hotspotX>
-                        <hotspotY>0.529411793</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
