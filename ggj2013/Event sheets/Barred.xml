@@ -5,9 +5,14 @@
     <events>
         <variable comment="The max fat state for the player to fit through wide barred walls or floors." constant="0" name="WideMaxFatState" static="0" type="number">2</variable>
         <variable comment="The max fat state for the player to fit through thin barred walls or floors." constant="0" name="ThinMaxFatState" static="0" type="number">1</variable>
-        <event-block>
+        <event-block any="1">
             <conditions>
-                <condition id="0" name="On collision with another object" type="PlayerCollision">
+                <condition id="9" name="Is overlapping at offset" type="PlayerCollision">
+                    <param id="0" name="Object">BarredFloorThin</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition disabled="1" id="0" name="On collision with another object" type="PlayerCollision">
                     <param id="0" name="Object">BarredFloorThin</param>
                 </condition>
             </conditions>
@@ -39,9 +44,14 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block>
+        <event-block any="1">
             <conditions>
-                <condition id="0" name="On collision with another object" type="PlayerCollision">
+                <condition id="9" name="Is overlapping at offset" type="PlayerCollision">
+                    <param id="0" name="Object">BarredFloorWide</param>
+                    <param id="1" name="Offset X">0</param>
+                    <param id="2" name="Offset Y">1</param>
+                </condition>
+                <condition disabled="1" id="0" name="On collision with another object" type="PlayerCollision">
                     <param id="0" name="Object">BarredFloorWide</param>
                 </condition>
             </conditions>
