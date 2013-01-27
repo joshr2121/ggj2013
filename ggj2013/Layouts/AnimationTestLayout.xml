@@ -281,7 +281,7 @@
                 <instance type="PlayerBody">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
+                        <initial-frame>2</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
@@ -311,8 +311,8 @@
                         <width>30</width>
                         <height>70</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.463414639</hotspotX>
+                        <hotspotY>0.536585391</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
