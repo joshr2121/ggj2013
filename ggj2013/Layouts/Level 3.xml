@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
     <name>Level 3</name>
-    <event-sheet></event-sheet>
+    <event-sheet>Main Event</event-sheet>
     <size>
         <width>1600</width>
         <height>1600</height>

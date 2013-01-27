@@ -7,11 +7,11 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -1541,12 +1541,11 @@
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Test Level.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
         <layout>Level 3.xml</layout>
         <layout>Level 4.xml</layout>
-        <layout>AnimationTestLayout.xml</layout>
+        <layout>Test Level.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Main Event.xml</event-sheet>
@@ -1601,6 +1600,12 @@
     <music-folder expanded="1">
         <file name="BacMan_Music_Level_00.m4a" />
         <file name="BacMan_Music_Level_00.ogg" />
+        <file name="BacMan_Level_02.m4a" />
+        <file name="BacMan_Level_02.ogg" />
+        <file name="BacMan_MainThem.m4a" />
+        <file name="BacMan_MainThem.ogg" />
+        <file name="BacMan_Music_Level_01.m4a" />
+        <file name="BacMan_Music_Level_01.ogg" />
     </music-folder>
     <files-folder expanded="1" />
 </c2project>
