@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <include>Treadmills</include>
         <include>Functions</include>
+        <include>Breakables</include>
+        <include>Treadmills</include>
         <event-block>
             <conditions>
                 <condition id="-2" name="On start of layout" type="System" />

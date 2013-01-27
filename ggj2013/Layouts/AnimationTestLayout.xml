@@ -330,6 +330,8 @@
                         <widthStart>0</widthStart>
                         <fatState>0</fatState>
                         <heartRate>1</heartRate>
+                        <fallSpeed>0</fallSpeed>
+                        <runSpeed>0</runSpeed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
