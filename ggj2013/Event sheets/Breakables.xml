@@ -29,6 +29,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;breakable&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-9" name="Destroy" type="LightBreakableFloor" />
             </actions>
             <sub-events>
@@ -65,6 +69,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;breakable&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-9" name="Destroy" type="HeavyBreakableFloor" />
             </actions>
         </event-block>
@@ -100,6 +108,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;breakable&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-9" name="Destroy" type="LightBreakableWall" />
             </actions>
         </event-block>
@@ -121,6 +133,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;breakable&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
                 <action id="-9" name="Destroy" type="HeavyBreakableWall" />
             </actions>
         </event-block>
