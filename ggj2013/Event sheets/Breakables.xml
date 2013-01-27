@@ -12,17 +12,17 @@
         <comment>Light breakable collisions</comment>
         <event-block>
             <conditions>
-                <condition id="9" name="Is overlapping at offset" type="Player">
+                <condition id="9" name="Is overlapping at offset" type="PlayerCollision">
                     <param id="0" name="Object">BreakableFloorLight</param>
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
                 </condition>
                 <condition id="-8" name="Compare two values" type="System">
-                    <param id="0" name="First value">Player.fallSpeed</param>
+                    <param id="0" name="First value">PlayerBody.fallSpeed</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Second value">LightBreakableMinFallSpeed</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" type="Player">
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">LightBreakableMinFatState</param>
@@ -45,24 +45,24 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" type="Debug_Fall_Speed">
-                    <param id="0" name="Text">Player.fallSpeed</param>
+                    <param id="0" name="Text">PlayerBody.fallSpeed</param>
                 </action>
             </actions>
         </event-block>
         <comment>Heavy breakable floor collisions</comment>
         <event-block>
             <conditions>
-                <condition id="9" name="Is overlapping at offset" type="Player">
+                <condition id="9" name="Is overlapping at offset" type="PlayerCollision">
                     <param id="0" name="Object">BreakableFloorHeavy</param>
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
                 </condition>
                 <condition id="-8" name="Compare two values" type="System">
-                    <param id="0" name="First value">Player.fallSpeed</param>
+                    <param id="0" name="First value">PlayerBody.fallSpeed</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Second value">HeavyBreakableMinFallSpeed</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" type="Player">
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">HeavyBreakableMinFatState</param>
@@ -83,20 +83,15 @@
                     <param id="0" name="Interval (seconds)">0.25</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-10" name="Set value" type="Player">
-                    <param id="0" name="Instance variable">fallSpeed</param>
-                    <param id="1" name="Value">Player.Platform.VectorY</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
         <comment>Light breakable wall collisions</comment>
         <event-block>
             <conditions>
-                <condition id="0" name="On collision with another object" type="Player">
+                <condition id="0" name="On collision with another object" type="PlayerCollision">
                     <param id="0" name="Object">BreakableWallLight</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" type="Player">
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">LightBreakableMinFatState</param>
@@ -113,12 +108,12 @@
                 <event-block any="1">
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="0" name="First value">PlayerBody.runSpeed</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">LightBreakableMinRunSpeed</param>
                         </condition>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="0" name="First value">PlayerBody.runSpeed</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">LightBreakableMinRunSpeed * -1</param>
                         </condition>
@@ -130,10 +125,10 @@
         <comment>Heavy breakable wall collisions</comment>
         <event-block>
             <conditions>
-                <condition id="0" name="On collision with another object" type="Player">
+                <condition id="0" name="On collision with another object" type="PlayerBody">
                     <param id="0" name="Object">BreakableWallHeavy</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" type="Player">
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">HeavyBreakableMinFatState</param>
@@ -150,12 +145,12 @@
                 <event-block any="1">
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="0" name="First value">PlayerBody.runSpeed</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">HeavyBreakableMinRunSpeed</param>
                         </condition>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">Player.runSpeed</param>
+                            <param id="0" name="First value">PlayerBody.runSpeed</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">HeavyBreakableMinRunSpeed * -1</param>
                         </condition>
@@ -170,12 +165,7 @@
                     <param id="0" name="Interval (seconds)">0.25</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-10" name="Set value" type="Player">
-                    <param id="0" name="Instance variable">runSpeed</param>
-                    <param id="1" name="Value">Player.Platform.VectorX</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <comment>Updates run speed</comment>
             </sub-events>

@@ -24,7 +24,7 @@
                 <event-block>
                     <conditions>
                         <condition id="0" name="On collision with another object" type="PressureButton">
-                            <param id="0" name="Object">Player</param>
+                            <param id="0" name="Object">PlayerCollision</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PressureButton">
                             <param id="0" name="Instance variable">triggered</param>

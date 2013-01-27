@@ -8,20 +8,20 @@
                 <condition id="0" name="On function" type="Function">
                     <param id="0" name="Name">&quot;idle&quot;</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" type="Player">
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">heartRate</param>
                     <param id="1" name="Comparison">4</param>
                     <param id="2" name="Value">0.1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-12" name="Subtract from" type="Player">
+                <action id="-12" name="Subtract from" type="PlayerBody">
                     <param id="0" name="Instance variable">heartRate</param>
                     <param id="1" name="Value">0.01</param>
                 </action>
                 <action id="5" name="Set playback rate" type="Audio">
                     <param id="0" name="Tag">&quot;heartbeat&quot;</param>
-                    <param id="1" name="Playback rate">Player.heartRate</param>
+                    <param id="1" name="Playback rate">PlayerBody.heartRate</param>
                 </action>
             </actions>
         </event-block>
@@ -32,21 +32,21 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" type="Player">
-                    <param id="0" name="Width">Player.Width -0.05</param>
+                <action id="-5" name="Set width" type="PlayerBody">
+                    <param id="0" name="Width">PlayerBody.Width -0.05</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="Player">
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">4.995</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" type="Player">
+                        <action id="-11" name="Add to" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Value">0.005</param>
                         </action>
@@ -61,8 +61,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" type="Player">
-                    <param id="0" name="Width">Player.Width + 10</param>
+                <action id="-5" name="Set width" type="PlayerBody">
+                    <param id="0" name="Width">PlayerBody.Width + 10</param>
                 </action>
                 <action id="0" name="Play" type="Audio">
                     <param id="0" name="Audio file">SFX_eating_bacon_short_01</param>
@@ -74,14 +74,14 @@
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="Player">
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">4.9</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" type="Player">
+                        <action id="-11" name="Add to" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Value">0.1</param>
                         </action>
@@ -96,19 +96,19 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" type="Player">
-                    <param id="0" name="Width">0.99 * Player.Width</param>
+                <action id="-5" name="Set width" type="PlayerBody">
+                    <param id="0" name="Width">0.99 * PlayerBody.Width</param>
                 </action>
             </actions>
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Player">
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
                             <param id="0" name="Instance variable">treadmillSound</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" type="Player">
+                        <action id="-13" name="Set boolean" type="PlayerBody">
                             <param id="0" name="Instance variable">treadmillSound</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -129,7 +129,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-13" name="Set boolean" type="Player">
+                <action id="-13" name="Set boolean" type="PlayerBody">
                     <param id="0" name="Instance variable">treadmillSound</param>
                     <param id="1" name="Value">0</param>
                 </action>
