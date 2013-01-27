@@ -296,5 +296,30 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Heart pulsating</comment>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="UI_Heart">
+                    <param id="0" name="Instance variable">previousRate</param>
+                    <param id="1" name="Value">playerBody.heartRate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="3" name="Compare frame" type="UI_Heart">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Set speed" type="UI_Heart">
+                    <param id="0" name="Speed">playerBody.heartRate * 10</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
