@@ -27,6 +27,12 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;heartbeat&quot;</param>
                 </action>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">SFX_breathing_06</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-100</param>
+                    <param id="1" name="Tag (optional)">&quot;breathing&quot;</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" type="PlayerHead">
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>
