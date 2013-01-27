@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main Event</name>
+    <events>
+        <include>Level Events</include>
+        <include>Checkpoints</include>
+        <include>Barred</include>
+        <include>PressureButtons</include>
+        <include>Functions</include>
+        <include>Breakables</include>
+        <include>Treadmills</include>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="On start of layout" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">SFX_heartbeat_06</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;heartbeat&quot;</param>
+                </action>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">SFX_breathing_06</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-100</param>
+                    <param id="1" name="Tag (optional)">&quot;breathing&quot;</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerHead">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerBody">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerArms">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerFeet_Idle">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-6" name="Every X seconds" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" type="UI_Width">
+                    <param id="0" name="Text">&quot;Width: &quot; &amp;int(PlayerBody.width)</param>
+                </action>
+                <action id="0" name="Set text" type="UI_Weight">
+                    <param id="0" name="Text">&quot;Weight: &quot; &amp;int(PlayerBody.fatness * 100)</param>
+                </action>
+                <action id="0" name="Set text" type="UI_Heartrate">
+                    <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;int(PlayerBody.heartRate * 100)</param>
+                </action>
+                <action id="0" name="Set text" type="UI_FatState">
+                    <param id="0" name="Text">&quot;Fat State: &quot; &amp;int(PlayerBody.fatState)</param>
+                </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;idle&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1">
+                    <conditions>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" type="Function">
+                            <param id="0" name="Name">&quot;move&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" type="PlayerHead">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerFeet_Idle">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerArms">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">faceLeft</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStart&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;idle&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" type="PlayerHead">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerFeet_Idle">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerArms">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">faceLeft</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStart&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;idle&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="ent_bacon">
+                    <param id="0" name="Object">PlayerCollision</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;bacon&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Destroy" type="ent_bacon" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-2" name="Compare Y" type="player_Limbs">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">LayoutHeight</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" type="System" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="1" name="Is overlapping another object" type="PlayerBody">
+                    <param id="0" name="Object">FanAir</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-8" name="Compare two values" type="System">
+                    <param id="0" name="First value">PlayerCollision.Platform.VectorY</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">-750</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" type="PlayerCollision">
+                    <param id="0" name="Vector Y">PlayerCollision.Platform.VectorY-75</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" type="System" />
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="PlayerCollision">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="PlayerCollision">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStop&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" type="PlayerCollision" />
+                <condition behavior="Platform" id="4" name="Is falling" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Air&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

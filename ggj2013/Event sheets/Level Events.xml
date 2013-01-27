@@ -11,10 +11,10 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="12" name="Set enabled" type="SwitchDoorVertical">
+                <action behavior="CustomMovement" id="12" name="Set enabled" type="SteelDoor">
                     <param id="0" name="State">1</param>
                 </action>
-                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" type="SwitchDoorVertical">
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" type="SteelDoor">
                     <param id="0" name="Acceleration">10</param>
                     <param id="1" name="Angle">270</param>
                 </action>

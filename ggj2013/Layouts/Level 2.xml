@@ -63,7 +63,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SwitchDoorVertical">
+                <instance type="SteelDoor">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -82,10 +82,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1376</x>
-                        <y>592</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>160</height>
+                        <height>256</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -369,7 +369,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -390,35 +390,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PressureButton">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <triggered>false</triggered>
-                        <minState>0</minState>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>928</x>
-                        <y>627</y>
-                        <z>0</z>
-                        <width>64</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>-0.387096763</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -626,7 +598,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -647,7 +619,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -668,7 +640,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -689,7 +661,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -719,11 +691,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2192</x>
-                        <y>608</y>
+                        <x>2208</x>
+                        <y>560</y>
                         <z>0</z>
-                        <width>34</width>
-                        <height>70</height>
+                        <width>216</width>
+                        <height>208</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -731,7 +703,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -752,7 +724,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -773,7 +745,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -794,7 +766,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -815,7 +787,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ent_bacon">
+                <instance type="ent_bacon_dance">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
@@ -943,6 +915,34 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PressureButton">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <triggered>false</triggered>
+                        <minState>0</minState>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>944</x>
+                        <y>656</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>39</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512820542</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="PlayerCollision">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -980,7 +980,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>151</x>
                         <y>264</y>
                         <z>0</z>
                         <width>32</width>
@@ -1019,14 +1019,46 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>149</x>
                         <y>272</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>70</height>
+                        <width>82</width>
+                        <height>82</height>
                         <depth>0</depth>
-                        <hotspotX>0.463414639</hotspotX>
-                        <hotspotY>0.536585391</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerArms">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <widthStart>0</widthStart>
+                        <fatState>0</fatState>
+                        <heartRate>0</heartRate>
+                        <fallSpeed>0</fallSpeed>
+                        <runSpeed>0</runSpeed>
+                        <treadmillSound>false</treadmillSound>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>149</x>
+                        <y>272</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.640625</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1051,11 +1083,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>149</x>
                         <y>320</y>
                         <z>0</z>
-                        <width>37</width>
-                        <height>23</height>
+                        <width>68</width>
+                        <height>68</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.632352948</hotspotY>
@@ -1083,14 +1115,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
-                        <y>224</y>
+                        <x>151</x>
+                        <y>256</y>
                         <z>0</z>
-                        <width>51</width>
-                        <height>41</height>
+                        <width>125</width>
+                        <height>190</height>
                         <depth>0</depth>
-                        <hotspotX>0.509803951</hotspotX>
-                        <hotspotY>0.51219511</hotspotY>
+                        <hotspotX>0.495999992</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

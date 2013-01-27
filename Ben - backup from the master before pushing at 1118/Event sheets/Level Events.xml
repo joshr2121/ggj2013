@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level Events</name>
+    <events>
+        <variable comment="The number of player&apos;s current level" constant="0" name="currentLevel" static="0" type="number">1</variable>
+        <event-block>
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" type="PressureButton">
+                    <param id="0" name="Instance variable">triggered</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="12" name="Set enabled" type="SwitchDoorVertical">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="CustomMovement" id="4" name="Accelerate toward angle" type="SwitchDoorVertical">
+                    <param id="0" name="Acceleration">10</param>
+                    <param id="1" name="Angle">270</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On collision with another object" type="PlayerCollision">
+                    <param id="0" name="Object">LevelEnd</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">Level 2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-14" name="Compare variable" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" type="System">
+                            <param id="0" name="Variable">currentLevel</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-2" name="Go to layout" type="System">
+                            <param id="0" name="Layout">Level 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
