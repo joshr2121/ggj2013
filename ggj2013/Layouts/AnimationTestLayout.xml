@@ -332,6 +332,7 @@
                         <heartRate>1</heartRate>
                         <fallSpeed>0</fallSpeed>
                         <runSpeed>0</runSpeed>
+                        <treadmillSound>false</treadmillSound>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

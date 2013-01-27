@@ -33,7 +33,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" type="Player">
-                    <param id="0" name="Width">Player.Width -0.01</param>
+                    <param id="0" name="Width">Player.Width -0.05</param>
                 </action>
             </actions>
             <sub-events>
@@ -72,6 +72,58 @@
                 <action id="-11" name="Add to" type="Player">
                     <param id="0" name="Instance variable">heartRate</param>
                     <param id="1" name="Value">0.1</param>
+                </action>
+                <action id="0" name="Play" type="Audio">
+                    <param id="0" name="Audio file">SFX_eating_bacon_short_01</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;bacon&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On function" type="Function">
+                    <param id="0" name="Name">&quot;treadmill&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" type="Player">
+                    <param id="0" name="Width">0.99 * Player.Width</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="Player">
+                            <param id="0" name="Instance variable">treadmillSound</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" type="Audio">
+                            <param id="0" name="Audio file">SFX_treadmill_on</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;treadmill&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" type="Player">
+                            <param id="0" name="Instance variable">treadmillSound</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On ended" type="Audio">
+                    <param id="0" name="Tag">&quot;treadmill&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" type="Player">
+                    <param id="0" name="Instance variable">treadmillSound</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
