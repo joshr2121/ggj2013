@@ -83,7 +83,12 @@
                     <param id="0" name="Interval (seconds)">0.25</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fallSpeed</param>
+                    <param id="1" name="Value">PlayerCollision.Platform.VectorY</param>
+                </action>
+            </actions>
         </event-block>
         <comment>Light breakable wall collisions</comment>
         <event-block>
@@ -165,7 +170,12 @@
                     <param id="0" name="Interval (seconds)">0.25</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">runSpeed</param>
+                    <param id="1" name="Value">PlayerCollision.Platform.VectorX</param>
+                </action>
+            </actions>
             <sub-events>
                 <comment>Updates run speed</comment>
             </sub-events>
