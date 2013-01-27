@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Treadmills</name>
     <events>
-        <variable constant="0" name="FastTreadmillMomentum" static="0" type="number">416</variable>
+        <variable constant="0" name="FastTreadmillMomentum" static="0" type="number">616</variable>
         <variable constant="0" name="SlowTreadmillMomentum" static="0" type="number">288</variable>
         <variable constant="0" name="TreadmillMomentumReduction" static="0" type="number">32</variable>
         <comment>Make sure the top two numbers here are divisible by TreadmillMomentumReduction.</comment>
