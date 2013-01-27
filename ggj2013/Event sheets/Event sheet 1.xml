@@ -13,15 +13,11 @@
                 <condition id="-2" name="On start of layout" type="System" />
             </conditions>
             <actions>
-                <action behavior="Pin" id="0" name="Pin to object" type="player_Limbs">
-                    <param id="0" name="Pin to">Player</param>
-                    <param id="1" name="Mode">0</param>
-                </action>
-                <action id="-10" name="Set value" type="Player">
+                <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">widthStart</param>
-                    <param id="1" name="Value">Player.Width</param>
+                    <param id="1" name="Value">PlayerBody.Width</param>
                 </action>
-                <action id="-10" name="Set value" type="Player">
+                <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Value">3</param>
                 </action>
@@ -31,13 +27,27 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;heartbeat&quot;</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerHead">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerBody">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerFeet">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerBody">
+                    <param id="0" name="Frame number">2</param>
+                </action>
             </actions>
         </event-block>
         <comment>Decide if &quot;player is moving&quot; is required for weight loss.</comment>
         <event-block>
             <conditions>
                 <condition id="-1" name="Every tick" type="System" />
-                <condition behavior="Platform" disabled="1" id="0" name="Is moving" type="Player" />
             </conditions>
             <actions />
             <sub-events>
@@ -77,8 +87,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" type="player_Limbs">
+                <action id="7" name="Set mirrored" type="PlayerHead">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerFeet">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">faceLeft</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -89,15 +106,22 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="7" name="Set mirrored" type="player_Limbs">
+                <action id="7" name="Set mirrored" type="PlayerHead">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" type="PlayerFeet">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-13" name="Set boolean" type="PlayerBody">
+                    <param id="0" name="Instance variable">faceLeft</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block>
             <conditions>
                 <condition id="0" name="On collision with another object" type="ent_bacon">
-                    <param id="0" name="Object">Player</param>
+                    <param id="0" name="Object">PlayerCollision</param>
                 </condition>
             </conditions>
             <actions>
@@ -115,29 +139,29 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" type="UI_Width">
-                    <param id="0" name="Text">&quot;Width: &quot; &amp;int(Player.width)</param>
+                    <param id="0" name="Text">&quot;Width: &quot; &amp;int(PlayerBody.width)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_Weight">
-                    <param id="0" name="Text">&quot;Weight: &quot; &amp;int(Player.Width*4)</param>
+                    <param id="0" name="Text">&quot;Weight: &quot; &amp;int(PlayerBody.Width*4)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_Heartrate">
-                    <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;int(Player.heartRate * 100)</param>
+                    <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;int(PlayerBody.heartRate * 100)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_FatState">
-                    <param id="0" name="Text">&quot;Fat State: &quot; &amp;int(Player.fatState)</param>
+                    <param id="0" name="Text">&quot;Fat State: &quot; &amp;int(PlayerBody.fatState)</param>
                 </action>
             </actions>
             <sub-events>
                 <comment>Cap max player width at 70 pixels</comment>
                 <event-block>
                     <conditions>
-                        <condition id="-5" name="Compare width" type="Player">
+                        <condition id="-5" name="Compare width" type="PlayerBody">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Width">70</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" type="Player">
+                        <action id="-5" name="Set width" type="PlayerBody">
                             <param id="0" name="Width">70</param>
                         </action>
                     </actions>
@@ -147,13 +171,13 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-5" name="Compare width" type="Player">
+                        <condition id="-5" name="Compare width" type="PlayerBody">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="Width">10</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-5" name="Set width" type="Player">
+                        <action id="-5" name="Set width" type="PlayerBody">
                             <param id="0" name="Width">10</param>
                         </action>
                     </actions>
@@ -163,59 +187,234 @@
         <comment>Set fatness states corresponding to player width</comment>
         <event-block>
             <conditions>
-                <condition id="-5" name="Compare width" type="Player">
-                    <param id="0" name="Comparison">5</param>
-                    <param id="1" name="Width">50</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" type="Player">
-                    <param id="0" name="Instance variable">fatState</param>
-                    <param id="1" name="Value">4</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block>
-            <conditions>
-                <condition id="-5" name="Compare width" type="Player">
-                    <param id="0" name="Comparison">5</param>
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">4</param>
                     <param id="1" name="Width">60</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" type="Player">
+                <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Value">5</param>
                 </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">250</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">9</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block>
             <conditions>
-                <condition id="-5" name="Compare width" type="Player">
+                <condition id="-5" name="Compare width" type="PlayerBody">
                     <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">60</param>
+                </condition>
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">350</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">8</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">50</param>
+                </condition>
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">4</param>
                     <param id="1" name="Width">25</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" type="Player">
+                <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
-                    <param id="1" name="Value">2</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">450</param>
                 </action>
             </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">7</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions />
+            <actions />
         </event-block>
         <event-block>
             <conditions>
-                <condition id="-5" name="Compare width" type="Player">
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">25</param>
+                </condition>
+                <condition id="-5" name="Compare width" type="PlayerBody">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">16</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">550</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">6</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-5" name="Compare width" type="PlayerBody">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="Width">16</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" type="Player">
+                <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action behavior="Platform" id="4" name="Set jump strength" type="PlayerCollision">
+                    <param id="0" name="Jump strength">650</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block>
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
+                            <param id="0" name="Instance variable">faceLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" type="PlayerBody">
+                            <param id="0" name="Frame number">5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block>
             <conditions>
@@ -232,20 +431,11 @@
         </event-block>
         <event-block>
             <conditions>
-                <condition id="1" name="Is overlapping another object" type="Player">
+                <condition id="1" name="Is overlapping another object" type="PlayerBody">
                     <param id="0" name="Object">Sprite</param>
                 </condition>
-                <condition id="-8" name="Compare two values" type="System">
-                    <param id="0" name="First value">Player.Platform.VectorY </param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">-750</param>
-                </condition>
             </conditions>
-            <actions>
-                <action behavior="Platform" id="9" name="Set vector Y" type="Player">
-                    <param id="0" name="Vector Y">Player.Platform.VectorY - 75</param>
-                </action>
-            </actions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
