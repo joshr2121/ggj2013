@@ -35,6 +35,10 @@
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Pin" id="0" name="Pin to object" type="PlayerArms">
+                    <param id="0" name="Pin to">PlayerCollision</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
                 <action behavior="Pin" id="0" name="Pin to object" type="PlayerFeet_Idle">
                     <param id="0" name="Pin to">PlayerCollision</param>
                     <param id="1" name="Mode">0</param>
@@ -97,13 +101,31 @@
                 <action id="7" name="Set mirrored" type="PlayerFeet_Idle">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="7" name="Set mirrored" type="PlayerArms">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-13" name="Set boolean" type="PlayerBody">
                     <param id="0" name="Instance variable">faceLeft</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStart&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="0" name="Call function" type="Function">
                     <param id="0" name="Name">&quot;idle&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
         </event-block>
@@ -120,13 +142,31 @@
                 <action id="7" name="Set mirrored" type="PlayerFeet_Idle">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="7" name="Set mirrored" type="PlayerArms">
+                    <param id="0" name="State">0</param>
+                </action>
                 <action id="-13" name="Set boolean" type="PlayerBody">
                     <param id="0" name="Instance variable">faceLeft</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStart&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="0" name="Call function" type="Function">
                     <param id="0" name="Name">&quot;idle&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
         </event-block>
@@ -208,6 +248,51 @@
             <actions>
                 <action id="-15" name="Set visible" type="PlayerCollision">
                     <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition behavior="Platform" id="0" inverted="1" name="Is moving" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;RunStop&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" type="PlayerArms">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="5" name="Set frame" type="PlayerHead">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" type="PlayerCollision" />
+                <condition behavior="Platform" id="4" name="Is falling" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Air&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition behavior="Platform" id="9" name="On landed" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" type="PlayerFeet_Idle">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
