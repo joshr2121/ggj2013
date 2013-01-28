@@ -2962,11 +2962,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>589</x>
-                        <y>717</y>
+                        <x>568.92767334</x>
+                        <y>714.07598877</y>
                         <z>0</z>
-                        <width>102</width>
-                        <height>233</height>
+                        <width>96</width>
+                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.50526315</hotspotY>
@@ -3082,11 +3082,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1101</x>
-                        <y>1005</y>
+                        <x>1047.010375977</x>
+                        <y>997.18359375</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>293</height>
+                        <width>32</width>
+                        <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -3130,7 +3130,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>672</x>
+                        <x>653</x>
                         <y>1376</y>
                         <z>0</z>
                         <width>118</width>
@@ -3312,7 +3312,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
+                        <x>512</x>
                         <y>384</y>
                         <z>0</z>
                         <width>1031</width>
