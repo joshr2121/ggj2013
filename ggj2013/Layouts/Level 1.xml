@@ -99,8 +99,8 @@
                         <width>587</width>
                         <height>353</height>
                         <depth>0</depth>
-                        <hotspotX>0.500851989</hotspotX>
-                        <hotspotY>0.501416028</hotspotY>
+                        <hotspotX>0.50085181</hotspotX>
+                        <hotspotY>0.501416445</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -162,8 +162,8 @@
                         <width>587</width>
                         <height>353</height>
                         <depth>0</depth>
-                        <hotspotX>0.500851989</hotspotX>
-                        <hotspotY>0.501416028</hotspotY>
+                        <hotspotX>0.50085181</hotspotX>
+                        <hotspotY>0.501416445</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -184,7 +184,7 @@
                         <height>411</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501217008</hotspotY>
+                        <hotspotY>0.501216531</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -205,7 +205,7 @@
                         <height>432</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.501217008</hotspotY>
+                        <hotspotY>0.501216531</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -225,7 +225,7 @@
                         <width>403</width>
                         <height>272</height>
                         <depth>0</depth>
-                        <hotspotX>0.501241028</hotspotX>
+                        <hotspotX>0.501240671</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -246,7 +246,7 @@
                         <width>403</width>
                         <height>272</height>
                         <depth>0</depth>
-                        <hotspotX>0.501241028</hotspotX>
+                        <hotspotX>0.501240671</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -267,7 +267,7 @@
                         <width>403</width>
                         <height>272</height>
                         <depth>0</depth>
-                        <hotspotX>0.501241028</hotspotX>
+                        <hotspotX>0.501240671</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -309,7 +309,7 @@
                         <width>170.896606445</width>
                         <height>115.344604492</height>
                         <depth>0</depth>
-                        <hotspotX>0.501241028</hotspotX>
+                        <hotspotX>0.501240671</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -330,7 +330,7 @@
                         <width>170.896606445</width>
                         <height>115.344604492</height>
                         <depth>0</depth>
-                        <hotspotX>0.501241028</hotspotX>
+                        <hotspotX>0.501240671</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -352,7 +352,7 @@
                         <height>280.532836914</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.502304018</hotspotY>
+                        <hotspotY>0.502304137</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1707,7 +1707,7 @@
                         <width>563</width>
                         <height>464</height>
                         <depth>0</depth>
-                        <hotspotX>0.50088799</hotspotX>
+                        <hotspotX>0.500888109</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1728,8 +1728,8 @@
                         <width>148.581039429</width>
                         <height>220.53956604</height>
                         <depth>0</depth>
-                        <hotspotX>0.502242029</hotspotX>
-                        <hotspotY>0.501510978</hotspotY>
+                        <hotspotX>0.502242148</hotspotX>
+                        <hotspotY>0.501510561</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1749,7 +1749,7 @@
                         <width>396.613433838</width>
                         <height>788.75793457</height>
                         <depth>0</depth>
-                        <hotspotX>0.501407981</hotspotX>
+                        <hotspotX>0.501408458</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1835,8 +1835,8 @@
                         <width>1031</width>
                         <height>773</height>
                         <depth>0</depth>
-                        <hotspotX>0.500485003</hotspotX>
-                        <hotspotY>0.500647008</hotspotY>
+                        <hotspotX>0.500484943</hotspotX>
+                        <hotspotY>0.50064683</hotspotY>
                         <angle>0</angle>
                         <opacity>0.25</opacity>
                     </world>
