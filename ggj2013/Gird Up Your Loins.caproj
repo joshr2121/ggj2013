@@ -7,14 +7,15 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>11400</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
@@ -398,7 +399,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="UI_Weight">
+        <object-type name="UI_Fatness">
             <plugin id="Text" />
         </object-type>
         <object-type name="UI_Heartrate">
@@ -522,7 +523,14 @@
             <animation-folder expanded="1">
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.512821" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821">
+                        <collision-poly>
+                            <point x="0.117188" y="0.282051" />
+                            <point x="0.867188" y="0.282051" />
+                            <point x="0.867188" y="1" />
+                            <point x="0.117188" y="0.974359" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1479,10 +1487,24 @@
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.968254" />
+                            <point x="0" y="0.968254" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.936508" />
+                            <point x="0" y="0.936508" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -1491,9 +1513,9 @@
             <animation-folder expanded="1">
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="11">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.511628" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.511628" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -2051,6 +2073,61 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="UI_Weight">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PigEndings1">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PigEndings2">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PigEndings3">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PigEndings4">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -2059,6 +2136,7 @@
         <layout>Level 3.xml</layout>
         <layout>Level 4.xml</layout>
         <layout>Test Level.xml</layout>
+        <layout>Ending.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Main Event.xml</event-sheet>
@@ -2069,6 +2147,7 @@
         <event-sheet>Barred.xml</event-sheet>
         <event-sheet>Checkpoints.xml</event-sheet>
         <event-sheet>Level Events.xml</event-sheet>
+        <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" />
@@ -2108,6 +2187,8 @@
         <file name="SFX_checkpoint_reached.ogg" />
         <file name="SFX_treadmill_off.m4a" />
         <file name="SFX_treadmill_off.ogg" />
+        <file name="SFX_garage_door.m4a" />
+        <file name="SFX_garage_door.ogg" />
     </sounds-folder>
     <music-folder expanded="1">
         <file name="BacMan_Music_Level_00.m4a" />
