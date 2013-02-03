@@ -89,6 +89,10 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;checkpoint&quot;</param>
                 </action>
+                <action id="0" name="Call function" type="Function">
+                    <param id="0" name="Name">&quot;endLevelCheckpointStuff&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
             <sub-events>
                 <event-block>
@@ -167,6 +171,27 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment>End level checkpoint stuff</comment>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On function" type="Function">
+                    <param id="0" name="Name">&quot;endLevelCheckpointStuff&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" type="CheckpointCurrent" />
+                <action id="-9" name="Destroy" type="CheckpointNotReached" />
+                <action id="-9" name="Destroy" type="CheckpointPassed" />
+                <action id="-10" name="Set value" type="CheckpointHandler">
+                    <param id="0" name="Instance variable">curCheckpointY</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-10" name="Set value" type="CheckpointHandler">
+                    <param id="0" name="Instance variable">curCheckpointX</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

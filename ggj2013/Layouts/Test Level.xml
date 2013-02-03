@@ -754,14 +754,14 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Checkpoint">
+                <instance type="CheckpointNotReached">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <index>0</index>
+                        <levelIndex>0</levelIndex>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
