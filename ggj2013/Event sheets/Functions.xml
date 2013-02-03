@@ -555,5 +555,19 @@
                 <action id="-26" name="Restart layout" type="System" />
             </actions>
         </event-block>
+        <event-block>
+            <conditions>
+                <condition id="0" name="On key pressed" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition behavior="Platform" id="2" name="Is on floor" type="PlayerCollision" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatness</param>
+                    <param id="1" name="Value">PlayerBody.fatness - 0.05</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

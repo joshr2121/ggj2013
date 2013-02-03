@@ -410,7 +410,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Heart pulsating</comment>
+        <comment>Jumpfarts</comment>
         <event-block>
             <conditions>
                 <condition id="0" name="On key pressed" type="Keyboard">
