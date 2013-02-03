@@ -12,9 +12,6 @@
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
                 </condition>
-                <condition disabled="1" id="0" name="On collision with another object" type="PlayerCollision">
-                    <param id="0" name="Object">BarredFloorThin</param>
-                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -50,9 +47,6 @@
                     <param id="0" name="Object">BarredFloorWide</param>
                     <param id="1" name="Offset X">0</param>
                     <param id="2" name="Offset Y">1</param>
-                </condition>
-                <condition disabled="1" id="0" name="On collision with another object" type="PlayerCollision">
-                    <param id="0" name="Object">BarredFloorWide</param>
                 </condition>
             </conditions>
             <actions />
