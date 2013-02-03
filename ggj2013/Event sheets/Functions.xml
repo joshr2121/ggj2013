@@ -24,6 +24,10 @@
                 <action id="-5" name="Set width" type="PlayerBody">
                     <param id="0" name="Width">PlayerBody.fatness * 82 + 60</param>
                 </action>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">minHeartRate</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block>
@@ -68,6 +72,10 @@
                         </action>
                         <action id="-5" name="Set width" type="PlayerBody">
                             <param id="0" name="Width">(PlayerBody.fatness - 0.2) * 82 + 60</param>
+                        </action>
+                        <action id="-10" name="Set value" type="PlayerBody">
+                            <param id="0" name="Instance variable">minHeartRate</param>
+                            <param id="1" name="Value">PlayerBody.maxHeartRate * 0.2</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -114,6 +122,10 @@
                                 <action id="-5" name="Set width" type="PlayerBody">
                                     <param id="0" name="Width">(PlayerBody.fatness - 0.4) * 82 + 60</param>
                                 </action>
+                                <action id="-10" name="Set value" type="PlayerBody">
+                                    <param id="0" name="Instance variable">minHeartRate</param>
+                                    <param id="1" name="Value">PlayerBody.maxHeartRate * 0.4</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block>
@@ -158,6 +170,10 @@
                                         </action>
                                         <action id="-5" name="Set width" type="PlayerBody">
                                             <param id="0" name="Width">(PlayerBody.fatness - 0.6) * 82 + 60</param>
+                                        </action>
+                                        <action id="-10" name="Set value" type="PlayerBody">
+                                            <param id="0" name="Instance variable">minHeartRate</param>
+                                            <param id="1" name="Value">PlayerBody.maxHeartRate * 0.6</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -204,6 +220,10 @@
                                                 <action id="-5" name="Set width" type="PlayerBody">
                                                     <param id="0" name="Width">(PlayerBody.fatness - 0.8) * 82 + 60</param>
                                                 </action>
+                                                <action id="-10" name="Set value" type="PlayerBody">
+                                                    <param id="0" name="Instance variable">minHeartRate</param>
+                                                    <param id="1" name="Value">PlayerBody.maxHeartRate * 0.8</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <event-block>
@@ -243,7 +263,7 @@
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0.1</param>
+                            <param id="2" name="Value">PlayerBody.minHeartRate</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -278,9 +298,9 @@
                 <event-block>
                     <conditions>
                         <condition id="-8" name="Compare two values" type="System">
-                            <param id="0" name="First value">PlayerBody.heartRate</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">PlayerBody.minHeartRate</param>
+                            <param id="0" name="First value">PlayerBody.fatness</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" type="PlayerBody">
                             <param id="0" name="Instance variable">deathActive</param>
@@ -305,7 +325,7 @@
             <sub-events>
                 <event-block>
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                        <condition disabled="1" id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">fatness</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
@@ -367,14 +387,14 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                        <condition disabled="1" id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Value">PlayerBody.maxHeartRate</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" type="PlayerBody">
+                        <action disabled="1" id="-11" name="Add to" type="PlayerBody">
                             <param id="0" name="Instance variable">heartRate</param>
                             <param id="1" name="Value">0.1</param>
                         </action>
@@ -390,20 +410,33 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block>
+                <event-block any="1">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
-                            <param id="0" name="Instance variable">fatness</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                        <condition id="2" name="Key is down" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" type="PlayerBody">
-                            <param id="0" name="Instance variable">fatness</param>
-                            <param id="1" name="Value">0.001</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block>
+                            <conditions>
+                                <condition disabled="1" id="-7" name="Compare instance variable" type="PlayerBody">
+                                    <param id="0" name="Instance variable">fatness</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" type="PlayerBody">
+                                    <param id="0" name="Instance variable">fatness</param>
+                                    <param id="1" name="Value">0.001</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block>
                     <conditions>
@@ -517,7 +550,7 @@
                     <param id="0" name="Audio file">SFX_puking_01</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-10</param>
-                    <param id="1" name="Tag (optional)">&quot;fat death&quot;</param>
+                    <param id="1" name="Tag (optional)">&quot;thin death&quot;</param>
                 </action>
                 <action id="-26" name="Restart layout" type="System" />
             </actions>
