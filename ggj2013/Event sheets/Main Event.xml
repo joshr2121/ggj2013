@@ -149,10 +149,10 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" type="UI_Width">
-                    <param id="0" name="Text">&quot;Width: &quot; &amp;int(PlayerBody.width)</param>
+                    <param id="0" name="Text">&quot;Width: &quot; &amp;int(PlayerBody.width) &amp;&quot;, Current Level: &quot; &amp;currentLevel</param>
                 </action>
-                <action id="0" name="Set text" type="UI_Weight">
-                    <param id="0" name="Text">&quot;Weight: &quot; &amp;int(PlayerBody.fatness * 100)</param>
+                <action id="0" name="Set text" type="UI_Fatness">
+                    <param id="0" name="Text">&quot;Fatness: &quot; &amp;(PlayerBody.fatness)</param>
                 </action>
                 <action id="0" name="Set text" type="UI_Heartrate">
                     <param id="0" name="Text">&quot;Heart Rate: &quot; &amp;int(PlayerBody.heartRate * 100)</param>
@@ -163,6 +163,9 @@
                 <action id="0" name="Call function" type="Function">
                     <param id="0" name="Name">&quot;idle&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-18" name="Rotate clockwise" type="ent_bacon_float">
+                    <param id="0" name="Degrees">dt+15</param>
                 </action>
             </actions>
             <sub-events>

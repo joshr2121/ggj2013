@@ -1260,7 +1260,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UI_Weight">
+                <instance type="UI_Fatness">
                     <properties>
                         <text>UI_Weight</text>
                         <initial-visibility>Visible</initial-visibility>

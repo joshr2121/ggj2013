@@ -28,6 +28,12 @@
                     <param id="0" name="Instance variable">minHeartRate</param>
                     <param id="1" name="Value">0.1</param>
                 </action>
+                <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorThin">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorWide">
+                    <param id="0" name="State">0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block>
@@ -77,6 +83,12 @@
                             <param id="0" name="Instance variable">minHeartRate</param>
                             <param id="1" name="Value">PlayerBody.maxHeartRate * 0.2</param>
                         </action>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorWide">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorThin">
+                            <param id="0" name="State">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block>
@@ -125,6 +137,9 @@
                                 <action id="-10" name="Set value" type="PlayerBody">
                                     <param id="0" name="Instance variable">minHeartRate</param>
                                     <param id="1" name="Value">PlayerBody.maxHeartRate * 0.4</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" type="BarredFloorWide">
+                                    <param id="0" name="State">1</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -334,7 +349,7 @@
                     <actions>
                         <action id="-12" name="Subtract from" type="PlayerBody">
                             <param id="0" name="Instance variable">fatness</param>
-                            <param id="1" name="Value">0.005</param>
+                            <param id="1" name="Value">0.002</param>
                         </action>
                     </actions>
                 </event-block>
