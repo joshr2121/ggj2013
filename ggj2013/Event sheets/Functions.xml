@@ -580,7 +580,7 @@
             <actions>
                 <action id="-10" name="Set value" type="PlayerBody">
                     <param id="0" name="Instance variable">fatness</param>
-                    <param id="1" name="Value">PlayerBody.fatness - 0.05</param>
+                    <param id="1" name="Value">PlayerBody.fatness - 0.02</param>
                 </action>
             </actions>
         </event-block>
