@@ -892,7 +892,7 @@
                     <instance-variables>
                         <heartRate>1</heartRate>
                         <minHeartRate>0.1</minHeartRate>
-                        <maxHeartRate>2</maxHeartRate>
+                        <maxHeartRate>2.5</maxHeartRate>
                         <fatness>0.5</fatness>
                         <fatState>3</fatState>
                         <fallSpeed>0</fallSpeed>
