@@ -514,7 +514,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Jumpfarts</comment>
+        <comment>Jumping</comment>
         <event-block>
             <conditions>
                 <condition id="0" name="On key pressed" type="Keyboard">
@@ -522,8 +522,18 @@
                 </condition>
                 <condition behavior="Platform" id="2" name="Is on floor" type="PlayerCollision" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatness</param>
+                    <param id="1" name="Value">PlayerBody.fatness - 0.02</param>
+                </action>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Value">PlayerBody.heartRate + 0.05</param>
+                </action>
+            </actions>
             <sub-events>
+                <comment>Jumpfarts</comment>
                 <event-block>
                     <conditions>
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
@@ -543,7 +553,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">fatState</param>
                             <param id="1" name="Comparison">0</param>
@@ -561,7 +570,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">fatState</param>
                             <param id="1" name="Comparison">0</param>
@@ -579,7 +587,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">fatState</param>
                             <param id="1" name="Comparison">0</param>
@@ -597,7 +604,6 @@
                 </event-block>
                 <event-block>
                     <conditions>
-                        <condition id="-22" name="Else" type="System" />
                         <condition id="-7" name="Compare instance variable" type="PlayerBody">
                             <param id="0" name="Instance variable">fatState</param>
                             <param id="1" name="Comparison">0</param>
@@ -619,20 +625,20 @@
         <event-block>
             <conditions>
                 <condition id="-7" name="Compare instance variable" type="PlayerBody">
-                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="0" name="Instance variable">fatness</param>
                     <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">DeathVeinsLow.maxHeartRate</param>
+                    <param id="2" name="Value">DeathVeinsStarvation.maxFatness</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" type="DeathVeinsLow">
+                <action id="-15" name="Set visible" type="DeathVeinsStarvation">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="9" name="Set scale" type="DeathVeinsLow">
-                    <param id="0" name="Scale">2.3 - (2 * (DeathVeinsLow.maxHeartRate - PlayerBody.heartRate))</param>
+                <action id="9" name="Set scale" type="DeathVeinsStarvation">
+                    <param id="0" name="Scale">2.3 - (10 * (DeathVeinsStarvation.maxFatness - PlayerBody.fatness))</param>
                 </action>
-                <action id="-16" name="Set opacity" type="DeathVeinsLow">
-                    <param id="0" name="Opacity">500 * (DeathVeinsLow.maxHeartRate - PlayerBody.heartRate)</param>
+                <action id="-16" name="Set opacity" type="DeathVeinsStarvation">
+                    <param id="0" name="Opacity">1000 * (DeathVeinsStarvation.maxFatness - PlayerBody.fatness)</param>
                 </action>
             </actions>
         </event-block>
@@ -641,7 +647,7 @@
                 <condition id="-22" name="Else" type="System" />
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" type="DeathVeinsLow">
+                <action id="-15" name="Set visible" type="DeathVeinsStarvation">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -651,7 +657,7 @@
                 <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">heartRate</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">DeathVeinsHigh.minHeartRate</param>
+                    <param id="2" name="Value">DeathVeinsHeartAttack.minHeartRate</param>
                 </condition>
                 <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
@@ -660,14 +666,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" type="DeathVeinsHigh">
+                <action id="-15" name="Set visible" type="DeathVeinsHeartAttack">
                     <param id="0" name="Visibility">1</param>
                 </action>
-                <action id="9" name="Set scale" type="DeathVeinsHigh">
-                    <param id="0" name="Scale">2.3 - (2 * (PlayerBody.heartRate - DeathVeinsHigh.minHeartRate))</param>
+                <action id="9" name="Set scale" type="DeathVeinsHeartAttack">
+                    <param id="0" name="Scale">2.3 - (2 * (PlayerBody.heartRate - DeathVeinsHeartAttack.minHeartRate))</param>
                 </action>
-                <action id="-16" name="Set opacity" type="DeathVeinsHigh">
-                    <param id="0" name="Opacity">500 * (PlayerBody.heartRate - DeathVeinsHigh.minHeartRate)</param>
+                <action id="-16" name="Set opacity" type="DeathVeinsHeartAttack">
+                    <param id="0" name="Opacity">200 * (PlayerBody.heartRate - DeathVeinsHeartAttack.minHeartRate)</param>
                 </action>
             </actions>
         </event-block>
@@ -676,22 +682,88 @@
                 <condition id="-22" name="Else" type="System" />
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" type="DeathVeinsHigh">
+                <action id="-15" name="Set visible" type="DeathVeinsHeartAttack">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
-        <comment>Set defaults for Death Veins</comment>
+        <comment>Death Fades</comment>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatness</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">DeathFadeStarvation.maxFatness</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathFadeStarvation">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="9" name="Set scale" type="DeathFadeStarvation">
+                    <param id="0" name="Scale">2.3 - (10 * (DeathVeinsStarvation.maxFatness - PlayerBody.fatness))</param>
+                </action>
+                <action id="-16" name="Set opacity" type="DeathFadeStarvation">
+                    <param id="0" name="Opacity">1000 * (DeathVeinsStarvation.maxFatness - PlayerBody.fatness)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathFadeStarvation">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">DeathFadeHeartAttack.minHeartRate</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathFadeHeartAttack">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="9" name="Set scale" type="DeathFadeHeartAttack">
+                    <param id="0" name="Scale">2.3 - (2 * (PlayerBody.heartRate - DeathVeinsHeartAttack.minHeartRate))</param>
+                </action>
+                <action id="-16" name="Set opacity" type="DeathFadeHeartAttack">
+                    <param id="0" name="Opacity">200 * (PlayerBody.heartRate - DeathVeinsHeartAttack.minHeartRate)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-22" name="Else" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" type="DeathFadeHeartAttack">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set default minHeartRate for DeathVeinsHeartAttack and DeathFadeHeartAttack</comment>
         <event-block>
             <conditions>
                 <condition id="-2" name="On start of layout" type="System" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" type="DeathVeinsLow">
-                    <param id="0" name="Instance variable">maxHeartRate</param>
-                    <param id="1" name="Value">PlayerBody.minHeartRate + 0.5</param>
+                <action id="-10" name="Set value" type="DeathVeinsHeartAttack">
+                    <param id="0" name="Instance variable">minHeartRate</param>
+                    <param id="1" name="Value">PlayerBody.maxHeartRate - 0.5</param>
                 </action>
-                <action id="-10" name="Set value" type="DeathVeinsHigh">
+                <action id="-10" name="Set value" type="DeathFadeHeartAttack">
                     <param id="0" name="Instance variable">minHeartRate</param>
                     <param id="1" name="Value">PlayerBody.maxHeartRate - 0.5</param>
                 </action>
