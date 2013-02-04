@@ -6005,7 +6005,7 @@
                     <instance-variables>
                         <heartRate>1</heartRate>
                         <minHeartRate>0.1</minHeartRate>
-                        <maxHeartRate>2</maxHeartRate>
+                        <maxHeartRate>2.5</maxHeartRate>
                         <fatness>0.5</fatness>
                         <fatState>3</fatState>
                         <fallSpeed>0</fallSpeed>
@@ -7983,7 +7983,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1264</x>
-                        <y>560</y>
+                        <y>528</y>
                         <z>0</z>
                         <width>33</width>
                         <height>38</height>
@@ -8004,7 +8004,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>976</x>
-                        <y>544</y>
+                        <y>512</y>
                         <z>0</z>
                         <width>24</width>
                         <height>50</height>

@@ -281,6 +281,30 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
+                        <x>1072</x>
+                        <y>1184</y>
+                        <z>0</z>
+                        <width>32</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507042229</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Block35">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
                         <x>1056</x>
                         <y>1200</y>
                         <z>0</z>
@@ -580,7 +604,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>336</x>
-                        <y>208</y>
+                        <y>192</y>
                         <z>0</z>
                         <width>384</width>
                         <height>32</height>
@@ -1732,7 +1756,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>384</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1753,7 +1777,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>416</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1774,7 +1798,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>448</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1795,7 +1819,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>480</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1816,7 +1840,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>512</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1837,7 +1861,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>544</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1858,7 +1882,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>576</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1879,7 +1903,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>608</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1900,7 +1924,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>704</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1921,7 +1945,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>352</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1942,7 +1966,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>672</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -1963,7 +1987,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>640</x>
-                        <y>224</y>
+                        <y>208</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -2104,7 +2128,7 @@
                     <instance-variables>
                         <heartRate>1</heartRate>
                         <minHeartRate>0.1</minHeartRate>
-                        <maxHeartRate>3</maxHeartRate>
+                        <maxHeartRate>2.5</maxHeartRate>
                         <fatness>0.5</fatness>
                         <fatState>3</fatState>
                         <fallSpeed>0</fallSpeed>
@@ -2797,7 +2821,7 @@
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="Solid" />
@@ -3557,30 +3581,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Block35">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1072</x>
-                        <y>1184</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.507042229</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ent_bacon_float">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -3623,23 +3623,23 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DeathFadeHeartAttack">
+                <instance type="Block38">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <minHeartRate>1.5</minHeartRate>
-                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>384</y>
+                        <x>320</x>
+                        <y>208</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>768</height>
+                        <width>36</width>
+                        <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -3647,23 +3647,20 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="DeathFadeStarvation">
+                <instance type="ent_bacon_float">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <maxFatness>0.1</maxFatness>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>512</x>
-                        <y>384</y>
+                        <x>1312</x>
+                        <y>960</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>768</height>
+                        <width>24</width>
+                        <height>50</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -3903,6 +3900,54 @@
                     <world>
                         <x>513</x>
                         <y>385</y>
+                        <z>0</z>
+                        <width>1024</width>
+                        <height>768</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DeathFadeStarvation">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <maxFatness>0.1</maxFatness>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>512</x>
+                        <y>384</y>
+                        <z>0</z>
+                        <width>1024</width>
+                        <height>768</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DeathFadeHeartAttack">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <minHeartRate>1.5</minHeartRate>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>512</x>
+                        <y>384</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>768</height>
