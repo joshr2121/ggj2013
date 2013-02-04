@@ -653,6 +653,11 @@
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">DeathVeinsHigh.minHeartRate</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" type="DeathVeinsHigh">

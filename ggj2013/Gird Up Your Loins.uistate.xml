@@ -10,7 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1">Level 1</layout>
+        <layout>Level 1</layout>
         <layout>Level 2</layout>
         <layout>Level 3</layout>
         <layout>Level 4</layout>
@@ -20,6 +20,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Level Events</event-sheet>
         <event-sheet>Barred</event-sheet>
         <event-sheet>Checkpoints</event-sheet>
+        <event-sheet active="1">Breakables</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />
