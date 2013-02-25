@@ -13,9 +13,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Level 1</layout>
         <layout>Level 2</layout>
         <layout>Level 3</layout>
-        <layout active="1">Level 4</layout>
+        <layout>Level 4</layout>
         <layout>Ending</layout>
-        <event-sheet>Main Event</event-sheet>
+        <event-sheet active="1">Main Event</event-sheet>
         <event-sheet>Functions</event-sheet>
         <event-sheet>Level Events</event-sheet>
         <event-sheet>Barred</event-sheet>
