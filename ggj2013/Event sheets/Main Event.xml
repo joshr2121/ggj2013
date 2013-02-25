@@ -728,7 +728,7 @@
                 <condition id="-7" name="Compare instance variable" type="PlayerBody">
                     <param id="0" name="Instance variable">fatState</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">5</param>
+                    <param id="2" name="Value">4</param>
                 </condition>
             </conditions>
             <actions>
@@ -766,6 +766,58 @@
                 <action id="-10" name="Set value" type="DeathFadeHeartAttack">
                     <param id="0" name="Instance variable">minHeartRate</param>
                     <param id="1" name="Value">PlayerBody.maxHeartRate - 0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block>
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                            <param id="0" name="Instance variable">heartRate</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">2.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" type="PlayerBody">
+                            <param id="0" name="Instance variable">heartRate</param>
+                            <param id="1" name="Value">2.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block>
+            <conditions>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">fatState</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">2.4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" type="PlayerBody">
+                    <param id="0" name="Instance variable">heartRate</param>
+                    <param id="1" name="Value">2.4</param>
                 </action>
             </actions>
         </event-block>
